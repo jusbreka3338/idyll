@@ -1,0 +1,124 @@
+[gd_scene load_steps=6 format=3 uid="uid://clllr28r5nxlc"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_yplfd"]
+[ext_resource type="PackedScene" uid="uid://c77tib0j3eumc" path="res://node_2d.tscn" id="2_4rtes"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ypsky"]
+bg_color = Color(0, 0, 0, 0.392157)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xw1p"]
+bg_color = Color(0, 0, 0, 0.490196)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqgct"]
+bg_color = Color(0, 0, 0, 0.686275)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yplfd")
+mainGameScene = ExtResource("2_4rtes")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.192157, 0.192157, 0.317647, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.998523, 1)
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 75
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 125
+text = "Idyll
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="Play Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_ypsky")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4xw1p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gqgct")
+text = "Play"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="Credits Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_ypsky")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4xw1p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gqgct")
+text = "Credits"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="Quit Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_ypsky")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4xw1p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gqgct")
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Credits Button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3/Quit Button" to="." method="_on_quit_button_pressed"]
