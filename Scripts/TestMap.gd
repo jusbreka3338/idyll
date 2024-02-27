@@ -1,6 +1,6 @@
 extends Node2D
 
-const NPCspeed = 15
+const NPCspeed = 50
 
 func _ready():
 	pass

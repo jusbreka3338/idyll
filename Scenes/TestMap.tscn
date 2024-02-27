@@ -1,42 +1,69 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwj4jacfnd3yk"]
+[gd_scene load_steps=15 format=3 uid="uid://dwj4jacfnd3yk"]
 
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="1_62ph2"]
-[ext_resource type="Script" path="res://Scenes/TestMap.gd" id="1_ewgla"]
+[ext_resource type="Script" path="res://Scripts/TestMap.gd" id="1_akauo"]
 [ext_resource type="PackedScene" uid="uid://da0qxpfj2dunu" path="res://NPC.tscn" id="2_8f8c4"]
-[ext_resource type="Script" path="res://Scenes/TileMap.gd" id="2_vk67s"]
+[ext_resource type="Script" path="res://Scripts/TileMap.gd" id="3_3e1e6"]
+[ext_resource type="Texture2D" uid="uid://dajhjtsjq7lgc" path="res://Assets/Temp1Building.png" id="3_oj5ny"]
+[ext_resource type="Texture2D" uid="uid://dp210wk8ovjy" path="res://Assets/Temp2Building.png" id="4_f5b3s"]
+[ext_resource type="PackedScene" uid="uid://sy8hclu60op2" path="res://Scenes/trash_can.tscn" id="5_iu423"]
+[ext_resource type="Texture2D" uid="uid://cg6xa1ki4ck7p" path="res://Assets/Temp2SpreadBuilding.png" id="5_tmxir"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxd0g"]
 texture = ExtResource("1_62ph2")
 texture_region_size = Vector2i(300, 260)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixivy"]
+texture = ExtResource("3_oj5ny")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rp8ga"]
+texture = ExtResource("4_f5b3s")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ch6db"]
+texture = ExtResource("5_tmxir")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_4etrk"]
 tile_shape = 1
 tile_layout = 5
-tile_size = Vector2i(300, 174)
+tile_size = Vector2i(1900, 1100)
 sources/0 = SubResource("TileSetAtlasSource_dxd0g")
+sources/1 = SubResource("TileSetAtlasSource_ixivy")
+sources/2 = SubResource("TileSetAtlasSource_rp8ga")
+sources/3 = SubResource("TileSetAtlasSource_ch6db")
 
 [sub_resource type="Curve2D" id="Curve2D_h36h6"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 186, 307, 0, 0, 0, 0, 335, 218, 0, 0, 0, 0, 603, 378, 0, 0, 0, 0, 872, 217, 0, 0, 0, 0, 1025, 309, 0, 0, 0, 0, 603, 554, 0, 0, 0, 0, 478, 481, 0, 0, 0, 0, 751, 324, 0, 0, 0, 0, 571, 220, 0, 0, 0, 0, 304, 377, 0, 0, 0, 0, 186, 307)
+"points": PackedVector2Array(0, 0, 0, 0, 1403, 2013, 0, 0, 0, 0, 2273, 1505, 0, 0, 0, 0, 2695, 1770, 0, 0, 0, 0, 2380, 1983, 0, 0, 0, 0, 2850, 2271, 0, 0, 0, 0, 3691, 1787, 0, 0, 0, 0, 4134, 2080, 0, 0, 0, 0, 4304, 1985, 0, 0, 0, 0, 3851, 1697)
 }
-point_count = 11
+point_count = 9
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_ewgla")
+script = ExtResource("1_akauo")
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(2.08165e-12, 500)
 tile_set = SubResource("TileSet_4etrk")
 cell_quadrant_size = 1
 format = 2
-layer_0/tile_data = PackedInt32Array(65538, 0, 0, 2, 0, 0, 3, 0, 0, 65539, 0, 0, -65533, 0, 0, 4, 0, 0, -65532, 0, 0, -65534, 0, 0, 65540, 0, 0)
-script = ExtResource("2_vk67s")
+layer_0/tile_data = PackedInt32Array(-65535, 1, 0, 1, 3, 0, 2, 1, 0, -65534, 2, 0)
+script = ExtResource("3_3e1e6")
+
+[node name="TrashCan" parent="." instance=ExtResource("5_iu423")]
+position = Vector2(2220, 1456)
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_h36h6")
+metadata/_edit_group_ = true
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(186, 307)
+position = Vector2(1403, 2013)
 rotates = false
 metadata/_edit_group_ = true
 
