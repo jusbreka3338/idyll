@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwj4jacfnd3yk"]
+[gd_scene load_steps=6 format=3 uid="uid://dwj4jacfnd3yk"]
 
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="1_62ph2"]
 [ext_resource type="PackedScene" uid="uid://da0qxpfj2dunu" path="res://NPC.tscn" id="2_8f8c4"]
+[ext_resource type="PackedScene" uid="uid://yg5e47k0w4og" path="res://pause_menu.tscn" id="3_4lk15"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxd0g"]
 texture = ExtResource("1_62ph2")
@@ -24,3 +25,14 @@ layer_0/tile_data = PackedInt32Array(131079, 0, 0, 131076, 0, 0, 131075, 0, 0, -
 
 [node name="NPC" parent="." instance=ExtResource("2_8f8c4")]
 position = Vector2(301, 134)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_4lk15")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
