@@ -1,25 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://da0qxpfj2dunu"]
+[gd_scene load_steps=3 format=3 uid="uid://da0qxpfj2dunu"]
 
 [ext_resource type="Script" path="res://NPC.gd" id="1_dlff5"]
 [ext_resource type="Texture2D" uid="uid://b1rdiygh8yefu" path="res://icon.svg" id="1_hfelo"]
 
-[sub_resource type="Curve2D" id="Curve2D_x7kos"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 137, 127, 0, 0, 0, 0, 167, 870, 0, 0, 0, 0, 1566, 953, 0, 0, 0, 0, 1368, 292, 0, 0, 0, 0, 137, 126, 0, 0, 0, 0, 137, 127)
-}
-point_count = 6
-
 [node name="NPC" type="Node2D"]
 script = ExtResource("1_dlff5")
 
-[node name="Path2D" type="Path2D" parent="."]
-curve = SubResource("Curve2D_x7kos")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(148.726, 417.41)
-progress = 290.647
-rotates = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
-position = Vector2(2.08165e-12, 2.08165e-12)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_hfelo")
