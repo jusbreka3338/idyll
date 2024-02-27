@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwj4jacfnd3yk"]
+[gd_scene load_steps=8 format=3 uid="uid://dwj4jacfnd3yk"]
 
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="1_62ph2"]
+[ext_resource type="Script" path="res://Scenes/TestMap.gd" id="1_ewgla"]
 [ext_resource type="PackedScene" uid="uid://da0qxpfj2dunu" path="res://NPC.tscn" id="2_8f8c4"]
+[ext_resource type="Script" path="res://Scenes/TileMap.gd" id="2_vk67s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxd0g"]
 texture = ExtResource("1_62ph2")
@@ -14,13 +16,28 @@ tile_layout = 5
 tile_size = Vector2i(300, 174)
 sources/0 = SubResource("TileSetAtlasSource_dxd0g")
 
+[sub_resource type="Curve2D" id="Curve2D_h36h6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 186, 307, 0, 0, 0, 0, 335, 218, 0, 0, 0, 0, 603, 378, 0, 0, 0, 0, 872, 217, 0, 0, 0, 0, 1025, 309, 0, 0, 0, 0, 603, 554, 0, 0, 0, 0, 478, 481, 0, 0, 0, 0, 751, 324, 0, 0, 0, 0, 571, 220, 0, 0, 0, 0, 304, 377, 0, 0, 0, 0, 186, 307)
+}
+point_count = 11
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ewgla")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4etrk")
 cell_quadrant_size = 1
 format = 2
-layer_0/tile_data = PackedInt32Array(131079, 0, 0, 131076, 0, 0, 131075, 0, 0, -131065, 0, 0, -65529, 0, 0, -196603, 0, 0, -196602, 0, 0, 65538, 0, 0, 2, 0, 0, -65533, 0, 0, -131068, 0, 0, -196604, 0, 0, -65534, 0, 0, -65532, 0, 0, 65539, 0, 0, 4, 0, 0, 5, 0, 0, -65531, 0, 0, -65530, 0, 0, -131066, 0, 0, 1, 0, 0, -262139, 0, 0, 8, 0, 0, 65544, 0, 0, 196614, 0, 0, 196613, 0, 0, 65540, 0, 0, 6, 0, 0, 65541, 0, 0)
+layer_0/tile_data = PackedInt32Array(65538, 0, 0, 2, 0, 0, 3, 0, 0, 65539, 0, 0, -65533, 0, 0, 4, 0, 0, -65532, 0, 0, -65534, 0, 0, 65540, 0, 0)
+script = ExtResource("2_vk67s")
 
-[node name="NPC" parent="." instance=ExtResource("2_8f8c4")]
-position = Vector2(301, 134)
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_h36h6")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(186, 307)
+rotates = false
+metadata/_edit_group_ = true
+
+[node name="NPC" parent="Path2D/PathFollow2D" instance=ExtResource("2_8f8c4")]
