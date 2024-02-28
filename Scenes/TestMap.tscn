@@ -13,26 +13,41 @@
 texture = ExtResource("1_62ph2")
 texture_region_size = Vector2i(300, 260)
 0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixivy"]
 texture = ExtResource("3_oj5ny")
 texture_region_size = Vector2i(1940, 1750)
 0:0/0 = 0
+0:0/0/y_sort_origin = -150
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.89954, -356.382, -394.566, -147.078, 4.24268, 65.0538, 383.252, -147.078)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rp8ga"]
 texture = ExtResource("4_f5b3s")
 texture_region_size = Vector2i(1940, 1750)
 0:0/0 = 0
+0:0/0/y_sort_origin = -150
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-49.4976, -401.637, -926.31, 147.078, -555.786, 367.696, 321.026, -132.936)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ch6db"]
 texture = ExtResource("5_tmxir")
 texture_region_size = Vector2i(1940, 1750)
 0:0/0 = 0
+0:0/0/y_sort_origin = -150
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-43.8407, -415.779, -977.222, 175.362, -584.07, 384.666, 371.938, -149.907)
 
 [sub_resource type="TileSet" id="TileSet_4etrk"]
 tile_shape = 1
 tile_layout = 5
 tile_size = Vector2i(1900, 1100)
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_dxd0g")
 sources/1 = SubResource("TileSetAtlasSource_ixivy")
 sources/2 = SubResource("TileSetAtlasSource_rp8ga")
@@ -45,26 +60,31 @@ _data = {
 point_count = 9
 
 [node name="Node2D" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_akauo")
 
 [node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
 position = Vector2(2.08165e-12, 500)
 tile_set = SubResource("TileSet_4etrk")
 cell_quadrant_size = 1
 format = 2
+layer_0/y_sort_enabled = true
 layer_0/tile_data = PackedInt32Array(-65535, 1, 0, 1, 3, 0, 2, 1, 0, -65534, 2, 0)
 script = ExtResource("3_3e1e6")
 
-[node name="TrashCan" parent="." instance=ExtResource("5_iu423")]
-position = Vector2(2220, 1456)
-
 [node name="Path2D" type="Path2D" parent="."]
+y_sort_enabled = true
 curve = SubResource("Curve2D_h36h6")
 metadata/_edit_group_ = true
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+y_sort_enabled = true
 position = Vector2(1403, 2013)
 rotates = false
 metadata/_edit_group_ = true
 
 [node name="NPC" parent="Path2D/PathFollow2D" instance=ExtResource("2_8f8c4")]
+
+[node name="TrashCan" parent="." instance=ExtResource("5_iu423")]
+position = Vector2(2220, 1456)
