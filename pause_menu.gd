@@ -17,6 +17,7 @@ func pause():
 	$AnimationPlayer.play("blur")
 	show()
 	score.hide()
+	visible
 
 func testEsc():
 	if Input.is_action_just_pressed("escape") and get_tree().paused == false:
