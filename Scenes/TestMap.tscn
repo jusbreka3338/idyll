@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dwj4jacfnd3yk"]
+[gd_scene load_steps=17 format=3 uid="uid://dwj4jacfnd3yk"]
 
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="1_62ph2"]
 [ext_resource type="Script" path="res://Scripts/TestMap.gd" id="1_akauo"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dp210wk8ovjy" path="res://Assets/Temp2Building.png" id="4_f5b3s"]
 [ext_resource type="PackedScene" uid="uid://sy8hclu60op2" path="res://Scenes/trash_can.tscn" id="5_iu423"]
 [ext_resource type="Texture2D" uid="uid://cg6xa1ki4ck7p" path="res://Assets/Temp2SpreadBuilding.png" id="5_tmxir"]
+[ext_resource type="PackedScene" uid="uid://yg5e47k0w4og" path="res://pause_menu.tscn" id="9_ey4an"]
+[ext_resource type="PackedScene" uid="uid://jhq551w5f08n" path="res://Score.tscn" id="10_0yktn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxd0g"]
 texture = ExtResource("1_62ph2")
@@ -88,3 +90,11 @@ metadata/_edit_group_ = true
 
 [node name="TrashCan" parent="." instance=ExtResource("5_iu423")]
 position = Vector2(2211, 1523)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("9_ey4an")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer2" instance=ExtResource("10_0yktn")]

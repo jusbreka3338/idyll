@@ -90,35 +90,34 @@ grow_vertical = 2
 script = ExtResource("3_s58dw")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -450.0
-offset_top = -500.0
-offset_right = 450.0
-offset_bottom = 500.0
+offset_left = -900.0
+offset_top = -1000.0
+offset_right = 900.0
+offset_bottom = 1000.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 25
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 25
+theme_override_constants/separation = 50
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.415686, 0.329412, 1, 1)
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 200
 text = "Paused"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -136,41 +135,41 @@ color = Color(0, 0, 0, 0.607843)
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 75
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 150
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/separation = 50
+theme_override_constants/separation = 100
 alignment = 1
 
 [node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 100
 text = "Resume
 "
 
 [node name="Button2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 100
 text = "Restart
 "
 
 [node name="Button3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 100
 text = "Back To Main Menu
 "
 
 [node name="Button4" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 100
 text = "Quit"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
