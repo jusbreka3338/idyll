@@ -87,4 +87,4 @@ metadata/_edit_group_ = true
 [node name="NPC" parent="Path2D/PathFollow2D" instance=ExtResource("2_8f8c4")]
 
 [node name="TrashCan" parent="." instance=ExtResource("5_iu423")]
-position = Vector2(2220, 1456)
+position = Vector2(2211, 1523)

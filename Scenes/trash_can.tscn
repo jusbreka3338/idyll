@@ -13,32 +13,34 @@ size = Vector2(60, 128)
 script = ExtResource("1_crc3p")
 
 [node name="TrashArea" type="Area2D" parent="."]
+position = Vector2(0, -65)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrashArea"]
 shape = SubResource("CircleShape2D_qnwfd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.5, 0)
+position = Vector2(0.5, -65)
 scale = Vector2(0.476562, 1)
 texture = ExtResource("1_qv33k")
 
 [node name="ClickArea" type="Area2D" parent="."]
+position = Vector2(0, -65)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
 shape = SubResource("RectangleShape2D_ltnsn")
 
 [node name="Trash1" type="Sprite2D" parent="."]
-position = Vector2(-86, 70)
+position = Vector2(-86, 5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_qv33k")
 
 [node name="Trash2" type="Sprite2D" parent="."]
-position = Vector2(-41, 105)
+position = Vector2(-41, 40)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_qv33k")
 
 [node name="Trash3" type="Sprite2D" parent="."]
-position = Vector2(6, 74)
+position = Vector2(6, 9)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_qv33k")
 
