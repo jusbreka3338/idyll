@@ -31,7 +31,7 @@ offset_left = -32.0
 offset_right = 32.0
 offset_bottom = 26.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 250
 text = "Credits :
 "
 horizontal_alignment = 1
@@ -45,10 +45,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_exqny")
-theme_override_constants/margin_left = 600
-theme_override_constants/margin_top = 900
-theme_override_constants/margin_right = 600
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_left = 2000
+theme_override_constants/margin_top = 2800
+theme_override_constants/margin_right = 2000
+theme_override_constants/margin_bottom = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
 layout_mode = 2
@@ -70,7 +70,7 @@ offset_right = 20.0
 offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 150
 text = "Back"
 horizontal_alignment = 1
 vertical_alignment = 1
