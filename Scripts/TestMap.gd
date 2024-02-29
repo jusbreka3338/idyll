@@ -11,3 +11,6 @@ func _process(delta):
 	$BobPath/BobFollow.progress += BOBspeed * delta
 	$FredPath/FredFollow.progress += FREDspeed * delta
 	$StacyPath/StacyFollow.progress += STACYspeed * delta
+
+	if Input.is_action_just_pressed("Cheat"):
+		global.Crowns += 10
