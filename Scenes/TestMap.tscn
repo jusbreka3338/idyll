@@ -77,10 +77,6 @@ y_sort_enabled = true
 script = ExtResource("1_akauo")
 
 [node name="CrownsText" parent="." instance=ExtResource("2_85j11")]
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 207.0
-offset_bottom = 134.0
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
