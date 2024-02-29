@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dwj4jacfnd3yk"]
+[gd_scene load_steps=20 format=3 uid="uid://dwj4jacfnd3yk"]
 
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="1_62ph2"]
 [ext_resource type="Script" path="res://Scripts/TestMap.gd" id="1_akauo"]
@@ -72,6 +72,15 @@ _data = {
 }
 point_count = 6
 
+[sub_resource type="Gradient" id="Gradient_ill48"]
+colors = PackedColorArray(1, 1, 0.94902, 1, 0.964706, 0.894118, 0.572549, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5luks"]
+gradient = SubResource("Gradient_ill48")
+fill = 1
+fill_from = Vector2(0.658257, 0.305046)
+fill_to = Vector2(0, 1)
+
 [node name="TestMap" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_akauo")
@@ -125,3 +134,8 @@ rotates = false
 [node name="NPC_Stacy" parent="StacyPath/StacyFollow" instance=ExtResource("2_8f8c4")]
 
 [node name="google en passant" type="HTTPRequest" parent="."]
+
+[node name="BackgroundGradient" type="TextureRect" parent="."]
+offset_right = 5748.0
+offset_bottom = 3246.0
+texture = SubResource("GradientTexture2D_5luks")
