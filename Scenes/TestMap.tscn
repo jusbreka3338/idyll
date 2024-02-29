@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://dwj4jacfnd3yk"]
+[gd_scene load_steps=19 format=3 uid="uid://dwj4jacfnd3yk"]
 
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="1_62ph2"]
 [ext_resource type="Script" path="res://Scripts/TestMap.gd" id="1_akauo"]
 [ext_resource type="PackedScene" uid="uid://da0qxpfj2dunu" path="res://NPC.tscn" id="2_8f8c4"]
 [ext_resource type="PackedScene" uid="uid://ds7p1fq6828rv" path="res://Scenes/crowns_text.tscn" id="2_85j11"]
+[ext_resource type="PackedScene" uid="uid://jhq551w5f08n" path="res://Score.tscn" id="2_xgqin"]
 [ext_resource type="Script" path="res://Scripts/TileMap.gd" id="3_3e1e6"]
 [ext_resource type="Texture2D" uid="uid://dajhjtsjq7lgc" path="res://Assets/Temp1Building.png" id="3_oj5ny"]
 [ext_resource type="Texture2D" uid="uid://dp210wk8ovjy" path="res://Assets/Temp2Building.png" id="4_f5b3s"]
@@ -72,18 +73,18 @@ _data = {
 }
 point_count = 6
 
-[sub_resource type="Gradient" id="Gradient_ill48"]
-colors = PackedColorArray(1, 1, 0.94902, 1, 0.964706, 0.894118, 0.572549, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_5luks"]
-gradient = SubResource("Gradient_ill48")
-fill = 1
-fill_from = Vector2(0.658257, 0.305046)
-fill_to = Vector2(0, 1)
-
 [node name="TestMap" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_akauo")
+
+[node name="Control" parent="." instance=ExtResource("2_xgqin")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 2880.0
+offset_right = 2880.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="CrownsText" parent="." instance=ExtResource("2_85j11")]
 
@@ -102,6 +103,8 @@ position = Vector2(2211, 1523)
 
 [node name="BobPath" type="Path2D" parent="."]
 y_sort_enabled = true
+position = Vector2(4.45093, 0)
+scale = Vector2(0.998966, 1)
 curve = SubResource("Curve2D_h36h6")
 metadata/_edit_group_ = true
 
@@ -134,8 +137,3 @@ rotates = false
 [node name="NPC_Stacy" parent="StacyPath/StacyFollow" instance=ExtResource("2_8f8c4")]
 
 [node name="google en passant" type="HTTPRequest" parent="."]
-
-[node name="BackgroundGradient" type="TextureRect" parent="."]
-offset_right = 5748.0
-offset_bottom = 3246.0
-texture = SubResource("GradientTexture2D_5luks")
