@@ -14,3 +14,5 @@ func _on_credits_button_pressed():
 
 func _on_quit_button_pressed():
 	get_tree().quit()
+
+#find this and I, Kesler, will give you $10 if you say the password "I really like mangos"
