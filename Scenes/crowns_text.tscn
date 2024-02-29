@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds7p1fq6828rv"]
+
+[ext_resource type="Script" path="res://Scenes/crowns_text.gd" id="1_m1kds"]
+
+[node name="CrownsText" type="Node2D"]
+script = ExtResource("1_m1kds")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 91.0
+offset_bottom = 40.0
+text = "0 Crowns"
