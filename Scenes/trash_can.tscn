@@ -40,7 +40,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_qv33k")
 
 [node name="Trash3" type="Sprite2D" parent="."]
-position = Vector2(6, 9)
+position = Vector2(66, 19)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_qv33k")
 

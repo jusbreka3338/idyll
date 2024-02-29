@@ -1,9 +1,15 @@
 extends Node2D
 
-const NPCspeed = 50
+var BOBspeed = 50
+var FREDspeed = 45
+var STACYspeed = 75
+
+var Crowns = 0
 
 func _ready():
 	pass
 
 func _process(delta):
-	$Path2D/PathFollow2D.progress += NPCspeed * delta
+	$BobPath/BobFollow.progress += BOBspeed * delta
+	$FredPath/FredFollow.progress += FREDspeed * delta
+	$StacyPath/StacyFollow.progress += STACYspeed * delta
