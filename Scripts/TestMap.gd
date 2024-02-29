@@ -4,8 +4,6 @@ var BOBspeed = 50
 var FREDspeed = 45
 var STACYspeed = 75
 
-var Crowns = 0
-
 func _ready():
 	pass
 
