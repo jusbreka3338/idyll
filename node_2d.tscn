@@ -4,3 +4,7 @@
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
+layer_0/name = "base"
+layer_0/modulate = Color(0.890196, 0.0823529, 0.533333, 1)
+layer_0/y_sort_origin = 50
+layer_0/z_index = 1
