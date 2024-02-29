@@ -1,5 +1,5 @@
-extends TextEdit
+extends Node2D
 
 
 func _process(delta):
-	$TextEdit.text = (global.Crowns)
+	$TextEdit.text = str(global.Crowns)
