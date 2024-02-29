@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu5tgtynk0qrl"]
+
+[ext_resource type="AudioStream" uid="uid://cnt75waj7og7y" path="res://Sounds/interactable hover.wav" id="1_5aso1"]
+[ext_resource type="AudioStream" uid="uid://oifs81ewhoa6" path="res://Sounds/Select sound.wav" id="2_buyfa"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_5aso1")
+volume_db = 24.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_buyfa")

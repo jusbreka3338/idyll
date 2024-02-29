@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://sy8hclu60op2"]
+
+[ext_resource type="Script" path="res://Scenes/trash_can.gd" id="1_crc3p"]
+[ext_resource type="Texture2D" uid="uid://b1rdiygh8yefu" path="res://icon.svg" id="1_qv33k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qnwfd"]
+radius = 194.312
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltnsn"]
+size = Vector2(60, 128)
+
+[node name="TrashCan" type="Node2D"]
+script = ExtResource("1_crc3p")
+
+[node name="TrashArea" type="Area2D" parent="."]
+position = Vector2(0, -65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashArea"]
+shape = SubResource("CircleShape2D_qnwfd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.5, -65)
+scale = Vector2(0.476562, 1)
+texture = ExtResource("1_qv33k")
+
+[node name="ClickArea" type="Area2D" parent="."]
+position = Vector2(0, -65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+shape = SubResource("RectangleShape2D_ltnsn")
+
+[node name="Trash1" type="Sprite2D" parent="."]
+position = Vector2(-86, 5)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_qv33k")
+
+[node name="Trash2" type="Sprite2D" parent="."]
+position = Vector2(-41, 40)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_qv33k")
+
+[node name="Trash3" type="Sprite2D" parent="."]
+position = Vector2(66, 19)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_qv33k")
+
+[connection signal="area_entered" from="TrashArea" to="." method="_on_trash_area_area_entered"]
+[connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]
+[connection signal="mouse_exited" from="ClickArea" to="." method="_on_click_area_mouse_exited"]
