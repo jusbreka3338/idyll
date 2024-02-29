@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://sy8hclu60op2"]
+[gd_scene load_steps=6 format=3 uid="uid://sy8hclu60op2"]
 
 [ext_resource type="Script" path="res://Scripts/trash_can.gd" id="1_l23ix"]
 [ext_resource type="Texture2D" uid="uid://b1rdiygh8yefu" path="res://icon.svg" id="1_qv33k"]
+[ext_resource type="Texture2D" uid="uid://7e3kgpbq2co1" path="res://Assets/Trashcan.png" id="2_b3mxh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qnwfd"]
 radius = 194.312
@@ -20,8 +21,8 @@ shape = SubResource("CircleShape2D_qnwfd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.5, -65)
-scale = Vector2(0.476562, 1)
-texture = ExtResource("1_qv33k")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_b3mxh")
 
 [node name="ClickArea" type="Area2D" parent="."]
 position = Vector2(0, -65)
