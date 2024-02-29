@@ -123,3 +123,5 @@ position = Vector2(4177, 1505)
 rotates = false
 
 [node name="NPC_Stacy" parent="StacyPath/StacyFollow" instance=ExtResource("2_8f8c4")]
+
+[node name="google en passant" type="HTTPRequest" parent="."]
