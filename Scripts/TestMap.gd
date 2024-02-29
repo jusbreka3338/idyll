@@ -6,6 +6,8 @@ var STACYspeed = 75
 var crowns = 0
 var stage = 1
 
+var Crowns = 0
+
 func _ready():
 	pass
 

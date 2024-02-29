@@ -34,5 +34,3 @@ func _process(delta):
 func _on_trash_area_area_entered(area):
 	if area.is_in_group("NPC") and TrashNumber > 0:
 		TrashNumber -= 1
-		global.Crowns += 1
-		print(global.Crowns)

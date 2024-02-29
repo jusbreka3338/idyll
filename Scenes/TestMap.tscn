@@ -76,10 +76,13 @@ y_sort_enabled = true
 script = ExtResource("1_akauo")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [node name="CrownsText" parent="." instance=ExtResource("2_85j11")]
 
 =======
 >>>>>>> AI
+=======
+>>>>>>> parent of db19e6c (Merge branch 'main' into peyton-makes-broken-code)
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 position = Vector2(2.08165e-12, 500)
