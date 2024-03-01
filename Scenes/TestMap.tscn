@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dwj4jacfnd3yk"]
+[gd_scene load_steps=21 format=3 uid="uid://dwj4jacfnd3yk"]
 
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="1_62ph2"]
 [ext_resource type="Script" path="res://Scripts/TestMap.gd" id="1_akauo"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dp210wk8ovjy" path="res://Assets/Temp2Building.png" id="4_f5b3s"]
 [ext_resource type="PackedScene" uid="uid://sy8hclu60op2" path="res://Scenes/trash_can.tscn" id="5_iu423"]
 [ext_resource type="Texture2D" uid="uid://cg6xa1ki4ck7p" path="res://Assets/Temp2SpreadBuilding.png" id="5_tmxir"]
+[ext_resource type="PackedScene" uid="uid://yg5e47k0w4og" path="res://pause_menu.tscn" id="11_qspgv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxd0g"]
 texture = ExtResource("1_62ph2")
@@ -147,6 +148,10 @@ rotates = false
 [node name="NPC_Stacy" parent="StacyPath/StacyFollow" instance=ExtResource("2_8f8c4")]
 
 [node name="google en passant" type="HTTPRequest" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("11_qspgv")]
 
 [connection signal="mouse_entered" from="TrashCan/ClickArea2" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="TrashCan/ClickArea2" to="." method="change_cursor_back"]
