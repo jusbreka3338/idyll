@@ -21,7 +21,6 @@ func _process(delta):
 		
 		get_tree().root.add_child(simultaneous_scene)
 		stage = 2
-		global.Crowns = 0
 		
 
 
