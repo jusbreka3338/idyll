@@ -17,7 +17,7 @@ func _process(delta):
 		var simultaneous_scene = preload("res://Scenes/TestMap.tscn").instantiate() #chooses scene to load
 		only_once = false
 		
-		get_tree().root.add_child(simultaneous_scene) #loads scene
+		#get_tree().root.add_child(simultaneous_scene) #loads scene
 		stage = 2
 
 func _add_a_scene_manually():
