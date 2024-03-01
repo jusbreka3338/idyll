@@ -47,5 +47,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_qv33k")
 
 [connection signal="area_entered" from="TrashArea" to="." method="_on_trash_area_area_entered"]
+[connection signal="mouse_entered" from="ClickArea" to="." method="change_cursor_hand"]
 [connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]
+[connection signal="mouse_exited" from="ClickArea" to="." method="change_cursor_back"]
 [connection signal="mouse_exited" from="ClickArea" to="." method="_on_click_area_mouse_exited"]

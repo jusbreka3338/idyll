@@ -36,3 +36,4 @@ func _on_trash_area_area_entered(area):
 		TrashNumber -= 1
 		global.Crowns += 1
 		print(global.Crowns)
+
