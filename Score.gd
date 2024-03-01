@@ -12,4 +12,4 @@ func _process(delta):
 	$Scoring.text = "Best Score : " + str(global.BestCrowns)
 	if global.Crowns > global.BestCrowns:
 		global.BestCrowns = global.Crowns
-	global.save_bestscore
+	global.save_bestscore()
