@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://baah3mg4ujl0h"]
+[gd_scene load_steps=22 format=3 uid="uid://baah3mg4ujl0h"]
 
 [ext_resource type="Script" path="res://Scripts/TestMap.gd" id="1_mxvjw"]
 [ext_resource type="PackedScene" uid="uid://jhq551w5f08n" path="res://Score.tscn" id="2_iw6y6"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://sy8hclu60op2" path="res://Scenes/trash_can.tscn" id="9_dhni6"]
 [ext_resource type="PackedScene" uid="uid://da0qxpfj2dunu" path="res://NPC.tscn" id="10_ajhbt"]
 [ext_resource type="Script" path="res://switch_text.gd" id="11_7auj3"]
+[ext_resource type="Script" path="res://next_line_2.gd" id="12_w1oot"]
+[ext_resource type="Texture2D" uid="uid://boune3qmkavna" path="res://Assets/Placeholders/one-finger.png" id="13_tm7s7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxd0g"]
 texture = ExtResource("4_rk4yg")
@@ -91,6 +93,7 @@ metadata/_edit_use_anchors_ = true
 [node name="CrownsText" parent="." instance=ExtResource("3_hbee3")]
 
 [node name="TileMap" type="TileMap" parent="."]
+z_index = -1
 y_sort_enabled = true
 position = Vector2(2.08165e-12, 500)
 tile_set = SubResource("TileSet_4etrk")
@@ -140,19 +143,47 @@ rotates = false
 
 [node name="google en passant" type="HTTPRequest" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 6.0
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2880.0
+offset_right = 2920.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control2"]
+offset_left = -2874.0
 offset_top = 2499.0
-offset_right = 5761.0
+offset_right = 2881.0
 offset_bottom = 2697.0
 color = Color(0.0705882, 0.0705882, 0.0705882, 0.666667)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 2420.0
-offset_top = 2536.0
-offset_right = 3382.0
-offset_bottom = 2688.0
+[node name="Tutorial1" type="RichTextLabel" parent="Control2"]
+layout_mode = 0
+offset_left = -400.0
+offset_top = 2539.0
+offset_right = 1665.0
+offset_bottom = 2672.0
 theme_override_font_sizes/normal_font_size = 70
+text = "These are your citizens."
 script = ExtResource("11_7auj3")
+
+[node name="Tutorial2" type="RichTextLabel" parent="Control2"]
+layout_mode = 0
+offset_left = -759.0
+offset_top = 2536.0
+offset_right = 4988.0
+offset_bottom = 2735.0
+theme_override_font_sizes/normal_font_size = 70
+text = "Tell your citizens to throw away their trash!"
+script = ExtResource("12_w1oot")
+
+[node name="Pointy" type="Sprite2D" parent="Control2"]
+position = Vector2(-664.311, 1159.63)
+rotation = 3.14159
+scale = Vector2(0.300699, 1.03975)
+texture = ExtResource("13_tm7s7")
+
+[connection signal="area_shape_entered" from="TrashCan/TrashArea" to="Control2/Tutorial1" method="_on_trash_area_area_shape_entered"]
+[connection signal="visibility_changed" from="Control2/Tutorial1" to="Control2/Tutorial2" method="_on_tutorial_1_visibility_changed"]
 
 [editable path="TrashCan"]
