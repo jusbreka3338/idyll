@@ -1,5 +1,8 @@
 extends Control
 
+func _ready:
+	get_node($LabelScore).set_text()"Best Score : " + str(global.BestCrowns)
+
 
 @export var mainGameScene : PackedScene
 
