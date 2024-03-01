@@ -28,5 +28,20 @@ func _process(delta):
 
 func _add_a_scene_manually():
 	pass
+	
+
+
+
+var hand_uncursor = preload("res://Assets/Cursor_-_game_jamidk.png")
+
+var hand_cursor = preload("res://Assets/Cursor_-_game_jam.png")
+
+func change_cursor_hand():
+	Input.set_custom_mouse_cursor(hand_cursor)
+	print("hi")
+
+func change_cursor_back():
+	Input.set_custom_mouse_cursor(hand_uncursor)
+	print("bye")
 
 #this comment will save the project!!!
