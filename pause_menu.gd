@@ -4,7 +4,7 @@ func _ready():
 	$AnimationPlayer.play("RESET")
 	hide()
 	score.show()
-@onready var score = $"../../CanvasLayer2/Control"
+@onready var score = $"../../Control"
 
 func resume():
 	get_tree().paused = false
