@@ -1,4 +1,7 @@
 extends Node2D
+#func _ready():
+	#get_node("	res://Scenes/.tscn").free()
+	
 
 var BOBspeed = 50
 var FREDspeed = 45
@@ -6,13 +9,9 @@ var STACYspeed = 75
 
 var stage = 1
 
-func _ready():
-	pass
 
 func _process(delta):
-	$BobPath/BobFollow.progress += BOBspeed * delta
-	$FredPath/FredFollow.progress += FREDspeed * delta
-	$StacyPath/StacyFollow.progress += STACYspeed * delta
+	pass
 	
 	if Input.is_action_pressed("cheat_crowns"):
 		global.Crowns += 10
