@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="idyll"
-run/main_scene="res://Scenes/TestMap.tscn"
+run/main_scene="res://Scenes/master.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
