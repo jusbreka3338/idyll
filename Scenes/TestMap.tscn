@@ -276,7 +276,7 @@ layer_1/name = "Road"
 layer_1/tile_data = PackedInt32Array(2, 4, 0, 1, 5, 0, -65535, 6, 0, -65534, 7, 0, 0, 10, 0, -65536, 11, 0, -131072, 12, 0, -131071, 13, 0, -131070, 14, 0, 65535, 15, 0, -1, 16, 0, -65537, 17, 0, -131073, 18, 0, -196608, 19, 0, -196607, 20, 0, -196606, 21, 0)
 layer_2/name = "Building"
 layer_2/y_sort_enabled = true
-layer_2/tile_data = PackedInt32Array()
+layer_2/tile_data = PackedInt32Array(-65537, 9, 0, -131073, 9, 0, -262144, 9, 0, 131072, 9, 0)
 script = ExtResource("3_3e1e6")
 
 [node name="TrashCan" parent="." instance=ExtResource("5_iu423")]
