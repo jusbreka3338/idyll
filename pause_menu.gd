@@ -35,6 +35,7 @@ func _on_button_pressed():
 func _on_button_2_pressed():
 	resume()
 	get_tree().reload_current_scene()
+	global.Crowns = 0
 	hide()
 	score.show()
 
