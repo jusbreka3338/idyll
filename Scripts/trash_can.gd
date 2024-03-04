@@ -13,6 +13,7 @@ func _on_click_area_mouse_exited():
 func _process(delta):
 	if Input.is_action_just_pressed("Click") and MouseHover == true and TrashNumber <3 :
 		TrashNumber += 1
+		$AudioStreamPlayer2D.play()
 		
 	if TrashNumber >= 1:
 		$Trash1.visible = true
@@ -36,4 +37,5 @@ func _on_trash_area_area_entered(area):
 		TrashNumber -= 1
 		global.Crowns += 1
 		print(global.Crowns)
+		$AudioStreamPlayer2D2.play()
 
