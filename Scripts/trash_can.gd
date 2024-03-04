@@ -35,7 +35,7 @@ func _process(delta):
 func _on_trash_area_area_entered(area):
 	if area.is_in_group("NPC") and TrashNumber > 0:
 		TrashNumber -= 1
-		global.Crowns += 1
+		global.Crowns += 3
 		print(global.Crowns)
 		$AudioStreamPlayer2D2.play()
 
