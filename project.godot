@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="idyll"
-run/main_scene="res://Scenes/TestMap.tscn"
+run/main_scene="res://Scenes/master.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -24,6 +24,7 @@ global="*res://Scripts/GlobalScript.gd"
 window/size/viewport_width=5760
 window/size/viewport_height=3240
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://Assets/Cursor_-_game_jamidk.png"
 
 [input]
 
@@ -51,3 +52,4 @@ cheat_crowns={
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_s3tc_bptc=true

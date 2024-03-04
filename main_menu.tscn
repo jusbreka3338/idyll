@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://clllr28r5nxlc"]
+[gd_scene load_steps=7 format=3 uid="uid://clllr28r5nxlc"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_yplfd"]
 [ext_resource type="PackedScene" uid="uid://c77tib0j3eumc" path="res://node_2d.tscn" id="2_4rtes"]
@@ -23,6 +23,15 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="GDScript" id="GDScript_g4ynk"]
+script/source = "# script: tex_bestscore (built-in)
+
+extends Label
+
+
+
+"
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -119,7 +128,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_4xw1p")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gqgct")
 text = "Quit"
 
-[node name="Label" type="Label" parent="."]
+[node name="LabelScore" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -137,6 +146,7 @@ text = "Best Score :
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+script = SubResource("GDScript_g4ynk")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Play Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Credits Button" to="." method="_on_credits_button_pressed"]

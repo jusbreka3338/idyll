@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dwj4jacfnd3yk"]
+[gd_scene load_steps=21 format=3 uid="uid://dwj4jacfnd3yk"]
 
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="1_62ph2"]
 [ext_resource type="Script" path="res://Scripts/TestMap.gd" id="1_akauo"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dp210wk8ovjy" path="res://Assets/Temp2Building.png" id="4_f5b3s"]
 [ext_resource type="PackedScene" uid="uid://sy8hclu60op2" path="res://Scenes/trash_can.tscn" id="5_iu423"]
 [ext_resource type="Texture2D" uid="uid://cg6xa1ki4ck7p" path="res://Assets/Temp2SpreadBuilding.png" id="5_tmxir"]
+[ext_resource type="PackedScene" uid="uid://yg5e47k0w4og" path="res://pause_menu.tscn" id="11_qspgv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxd0g"]
 texture = ExtResource("1_62ph2")
@@ -55,6 +56,9 @@ sources/1 = SubResource("TileSetAtlasSource_ixivy")
 sources/2 = SubResource("TileSetAtlasSource_rp8ga")
 sources/3 = SubResource("TileSetAtlasSource_ch6db")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q05km"]
+size = Vector2(81, 110)
+
 [sub_resource type="Curve2D" id="Curve2D_h36h6"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1403, 2013, 0, 0, 0, 0, 2273, 1505, 0, 0, 0, 0, 2695, 1770, 0, 0, 0, 0, 2380, 1983, 0, 0, 0, 0, 2850, 2271, 0, 0, 0, 0, 3691, 1787, 0, 0, 0, 0, 4134, 2080, 0, 0, 0, 0, 4304, 1985, 0, 0, 0, 0, 3851, 1697)
@@ -63,9 +67,9 @@ point_count = 9
 
 [sub_resource type="Curve2D" id="Curve2D_1v3vp"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 3224, 950, 0, 0, 0, 0, 2849, 1172, 0, 0, 0, 0, 2453, 948, 0, 0, 0, 0, 2000, 1207, 0, 0, 0, 0, 2355, 1434, 0, 0, 0, 0, 1917, 1721, 0, 0, 0, 0, 2839, 2261, 0, 0, 0, 0, 4179, 1510)
+"points": PackedVector2Array(0, 0, 0, 0, 3224, 950, 0, 0, 0, 0, 2849, 1172, 0, 0, 0, 0, 2453, 948, 0, 0, 0, 0, 2000, 1207, 0, 0, 0, 0, 2166, 1328, 0, 0, 0, 0, 2355, 1434, 0, 0, 0, 0, 1917, 1721, 0, 0, 0, 0, 2839, 2261, 0, 0, 0, 0, 4179, 1510)
 }
-point_count = 8
+point_count = 9
 
 [sub_resource type="Curve2D" id="Curve2D_ltemh"]
 _data = {
@@ -100,6 +104,13 @@ script = ExtResource("3_3e1e6")
 
 [node name="TrashCan" parent="." instance=ExtResource("5_iu423")]
 position = Vector2(2211, 1523)
+
+[node name="ClickArea2" type="Area2D" parent="TrashCan"]
+position = Vector2(0, -36.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashCan/ClickArea2"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_q05km")
 
 [node name="BobPath" type="Path2D" parent="."]
 y_sort_enabled = true
@@ -137,3 +148,10 @@ rotates = false
 [node name="NPC_Stacy" parent="StacyPath/StacyFollow" instance=ExtResource("2_8f8c4")]
 
 [node name="google en passant" type="HTTPRequest" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("11_qspgv")]
+
+[connection signal="mouse_entered" from="TrashCan/ClickArea2" to="." method="change_cursor_hand"]
+[connection signal="mouse_exited" from="TrashCan/ClickArea2" to="." method="change_cursor_back"]

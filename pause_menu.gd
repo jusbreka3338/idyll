@@ -4,7 +4,7 @@ func _ready():
 	$AnimationPlayer.play("RESET")
 	hide()
 	score.show()
-@onready var score = $"../../CanvasLayer2/Control"
+@onready var score = $"../../Control"
 
 func resume():
 	get_tree().paused = false
@@ -35,6 +35,7 @@ func _on_button_pressed():
 func _on_button_2_pressed():
 	resume()
 	get_tree().reload_current_scene()
+	global.Crowns = 0
 	hide()
 	score.show()
 
@@ -42,6 +43,7 @@ func _on_button_2_pressed():
 func _on_button_3_pressed():
 	resume()
 	get_tree().change_scene_to_file("res://main_menu.tscn")
+	global.Crowns = 0
 	hide()
 	score.show()
 
