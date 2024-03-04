@@ -3,6 +3,7 @@ extends Node2D
 var BOBspeed = 50
 var FREDspeed = 45
 var STACYspeed = 75
+var donce = true
 
 var stage = 1
 
@@ -17,8 +18,9 @@ func _process(delta):
 	if Input.is_action_pressed("cheat_crowns"):
 		global.Crowns += 10
 	
-	if global.Crowns >= 500 and stage == 1:
+	if global.Crowns >= 500 and stage == 1 and donce:
 		var simultaneous_scene = preload("res://Scenes/Stage2.tscn").instantiate()
+		donce = false
 		
 		get_tree().root.add_child(simultaneous_scene)
 		stage = 2
