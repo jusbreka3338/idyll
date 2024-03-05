@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://clllr28r5nxlc"]
+[gd_scene load_steps=16 format=3 uid="uid://clllr28r5nxlc"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_yplfd"]
 [ext_resource type="PackedScene" uid="uid://c77tib0j3eumc" path="res://node_2d.tscn" id="2_4rtes"]
@@ -12,27 +12,6 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oei50"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gwrcj"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ypsky"]
-bg_color = Color(0, 0, 0, 0.392157)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xw1p"]
-bg_color = Color(0, 0, 0, 0.490196)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqgct"]
-bg_color = Color(0, 0, 0, 0.686275)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m0stm"]
 
@@ -150,23 +129,6 @@ text = "watch
 
 "
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-visible = false
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_right = 50
-
-[node name="Credits Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
-visible = false
-layout_mode = 2
-focus_mode = 0
-theme_override_font_sizes/font_size = 175
-theme_override_styles/normal = SubResource("StyleBoxFlat_ypsky")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4xw1p")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gqgct")
-text = "Credits"
-
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -223,5 +185,4 @@ explosiveness = 0.24
 randomness = 0.2
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Play Button" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/Credits Button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3/Quit Button" to="." method="_on_quit_button_pressed"]
