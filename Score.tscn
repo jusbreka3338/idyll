@@ -25,6 +25,16 @@ text = "Best Score :"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ColorRect" type="ColorRect" parent="Scoring"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.129412, 0.129412, 0.129412, 1)
+
 [node name="Scoring_Current" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -39,3 +49,13 @@ theme_override_font_sizes/font_size = 50
 text = "Score :"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Scoring_Current"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.129412, 0.129412, 0.129412, 1)
