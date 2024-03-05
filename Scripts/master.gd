@@ -16,6 +16,9 @@ var donce3 = true
 
 
 func _ready():
+	$AnimationPlayer.play("Faderingout")
+	await get_tree().create_timer(1.5).timeout
+	queue_free
 	pass
 
 func _process(delta):
