@@ -32,7 +32,7 @@ extends Label
 _data = [Vector2(0, 0), 0.0, 1.04521, 0, 0, Vector2(0.493377, 0.492934), 0.0, 0.0, 0, 0, Vector2(0.986755, 0.0483323), -0.927754, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_njknh"]
+[sub_resource type="CurveTexture" id="CurveTexture_v2vdc"]
 curve = SubResource("Curve_5dqf3")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_o21lj"]
@@ -47,7 +47,7 @@ gravity = Vector3(2.08165e-12, 1, 2.08165e-12)
 scale_min = 0.5
 scale_max = 1.5
 color = Color(0.0862745, 0.219608, 0.278431, 1)
-alpha_curve = SubResource("CurveTexture_njknh")
+alpha_curve = SubResource("CurveTexture_v2vdc")
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
