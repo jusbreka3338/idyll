@@ -1,7 +1,15 @@
 extends Node2D
 
-var MouseHover = false
+var MouseHover : bool = false
 var TrashNumber = 0
+var hand_cursor = preload("res://Assets/Mouse Cursor/HoverCursor.png")
+var click_cursor = preload("res://Assets/Mouse Cursor/Click Cursor.png")
+var default_cursor = preload("res://Assets/Mouse Cursor/DefaultCursor.png")
+var checking
+
+func ready():
+	var checking : bool = true
+	pass
 
 func _on_click_area_mouse_entered():
 	MouseHover = true
@@ -11,9 +19,23 @@ func _on_click_area_mouse_exited():
 	MouseHover = false
 
 func _process(delta):
+	print(checking)
+	if checking == true:
+		if MouseHover == true:
+			change_cursor_hand()
+		else:
+			change_cursor_back()
+	else:
+		pass
+	
 	if Input.is_action_just_pressed("Click") and MouseHover == true and TrashNumber <3 :
 		TrashNumber += 1
 		$AudioStreamPlayer2D.play()
+		checking = false
+		change_cursor_click()
+		await get_tree().create_timer(0.15).timeout
+		checking = true
+		
 		
 	if TrashNumber >= 1:
 		$Trash1.visible = true
@@ -38,4 +60,16 @@ func _on_trash_area_area_entered(area):
 		global.Crowns += 3
 		print(global.Crowns)
 		$AudioStreamPlayer2D2.play()
+		
+		
+
+
+func change_cursor_hand():
+	Input.set_custom_mouse_cursor(hand_cursor)
+
+func change_cursor_back():
+	Input.set_custom_mouse_cursor(default_cursor)
+
+func change_cursor_click():
+	Input.set_custom_mouse_cursor(click_cursor)
 
