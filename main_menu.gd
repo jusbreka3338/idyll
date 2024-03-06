@@ -2,7 +2,7 @@ extends Control
 
 func _ready():
 	$ColorRect3.show()
-	$LabelScore.set_text("Best Score : " + str(global.BestCrowns))
+	$RichTextLabel.set_text("Best Score : " + str(global.BestCrowns))
 	$AnimationPlayer.play("Fadeout")
 	await get_tree().create_timer(1.5).timeout
 	$ColorRect3.hide()
