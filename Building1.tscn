@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm3n3wdfkf0nn"]
+
+[ext_resource type="Texture2D" uid="uid://dr3r6ht5x0b0g" path="res://Assets/Buildings/frame_apngframe05.png" id="1_arnxn"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="FrameApngframe09" type="Sprite2D" parent="."]
+position = Vector2(-135, -245)
+texture = ExtResource("1_arnxn")
