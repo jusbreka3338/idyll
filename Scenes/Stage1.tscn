@@ -27,7 +27,7 @@ y_sort_enabled = true
 script = ExtResource("1_1la0v")
 
 [node name="TrashCan" parent="." instance=ExtResource("5_iu423")]
-position = Vector2(3737, 1790)
+position = Vector2(2829, 2310)
 metadata/_edit_group_ = true
 
 [node name="BobPath" type="Path2D" parent="."]

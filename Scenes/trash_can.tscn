@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://sy8hclu60op2"]
+[gd_scene load_steps=10 format=3 uid="uid://sy8hclu60op2"]
 
 [ext_resource type="Script" path="res://Scripts/trash_can.gd" id="1_l23ix"]
 [ext_resource type="Texture2D" uid="uid://b4bm45d4obbn7" path="res://Assets/Trashcan.png" id="2_b3mxh"]
@@ -8,6 +8,26 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qnwfd"]
 radius = 194.312
+
+[sub_resource type="Animation" id="Animation_mrcn5"]
+resource_name = "TrashShake"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.509575, 0.509575, -0.170545, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_joiu7"]
+_data = {
+"TrashShake": SubResource("Animation_mrcn5")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltnsn"]
 size = Vector2(81, 110)
@@ -26,6 +46,11 @@ shape = SubResource("CircleShape2D_qnwfd")
 position = Vector2(0.5, -36.8)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_b3mxh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_joiu7")
+}
 
 [node name="ClickArea" type="Area2D" parent="."]
 position = Vector2(0, -36.8)
@@ -59,7 +84,7 @@ stream = ExtResource("5_4yaw0")
 volume_db = -10.265
 
 [connection signal="area_entered" from="TrashArea" to="." method="_on_trash_area_area_entered"]
-[connection signal="mouse_entered" from="ClickArea" to="." method="change_cursor_hand"]
 [connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]
+[connection signal="mouse_entered" from="ClickArea" to="." method="change_cursor_hand"]
 [connection signal="mouse_exited" from="ClickArea" to="." method="_on_click_area_mouse_exited"]
 [connection signal="mouse_exited" from="ClickArea" to="." method="change_cursor_back"]

@@ -29,8 +29,9 @@ func _process(delta):
 		pass
 	
 	if Input.is_action_just_pressed("Click") and MouseHover == true and TrashNumber <3 :
-		TrashNumber += 1
+		TrashNumber = 3
 		$AudioStreamPlayer2D.play()
+		$Sprite2D/AnimationPlayer.play("TrashShake")
 		checking = false
 		change_cursor_click()
 		await get_tree().create_timer(0.15).timeout
