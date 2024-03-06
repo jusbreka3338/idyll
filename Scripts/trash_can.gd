@@ -19,7 +19,6 @@ func _on_click_area_mouse_exited():
 	MouseHover = false
 
 func _process(delta):
-	print(checking)
 	if checking == true:
 		if MouseHover == true:
 			change_cursor_hand()

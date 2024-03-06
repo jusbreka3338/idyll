@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://clllr28r5nxlc"]
+[gd_scene load_steps=21 format=3 uid="uid://clllr28r5nxlc"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_yplfd"]
 [ext_resource type="PackedScene" uid="uid://c77tib0j3eumc" path="res://node_2d.tscn" id="2_4rtes"]
@@ -52,6 +52,22 @@ scale_max = 1.5
 color = Color(0.454902, 0.4, 0.352941, 1)
 alpha_curve = SubResource("CurveTexture_njknh")
 
+[sub_resource type="Animation" id="Animation_f7jv1"]
+resource_name = "Fadeout"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_u7smk"]
 length = 0.001
 tracks/0/type = "value"
@@ -77,6 +93,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_8pwok"]
@@ -109,6 +137,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jmpdw"]
 _data = {
+"Fadeout": SubResource("Animation_f7jv1"),
 "RESET": SubResource("Animation_u7smk"),
 "fadeingin": SubResource("Animation_8pwok")
 }
@@ -262,6 +291,16 @@ randomness = 0.2
 libraries = {
 "": SubResource("AnimationLibrary_jmpdw")
 }
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Play Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3/Quit Button" to="." method="_on_quit_button_pressed"]

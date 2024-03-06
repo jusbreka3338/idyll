@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://blmcm4phve1kt"]
+[gd_scene load_steps=7 format=3 uid="uid://blmcm4phve1kt"]
 
 [ext_resource type="Script" path="res://Start.gd" id="1_hqpoy"]
+[ext_resource type="FontFile" uid="uid://dxgkn382u36co" path="res://Open your eyes.ttf" id="2_d5n1r"]
 
 [sub_resource type="Animation" id="Animation_bqupe"]
 resource_name = "Fade In"
@@ -81,8 +82,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_d5n1r")
 theme_override_font_sizes/font_size = 150
-text = "Made By : The Decker Crew
+text = "3 to 1 Presents!
 "
 horizontal_alignment = 1
 vertical_alignment = 1
