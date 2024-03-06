@@ -65,7 +65,10 @@ func _on_trash_area_area_entered(area):
 
 
 func change_cursor_hand():
-	Input.set_custom_mouse_cursor(hand_cursor)
+	if TrashNumber <3:
+		Input.set_custom_mouse_cursor(hand_cursor)
+	else: 
+		change_cursor_back()
 
 func change_cursor_back():
 	Input.set_custom_mouse_cursor(default_cursor)
