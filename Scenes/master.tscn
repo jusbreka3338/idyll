@@ -342,7 +342,6 @@ scale = Vector2(3.21361, 3.11254)
 color = Color(1, 1, 0.972549, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-visible = false
 top_level = true
 offset_left = -283.0
 offset_top = -257.0
