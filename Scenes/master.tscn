@@ -292,6 +292,7 @@ _data = {
 
 [node name="Master" type="Node2D"]
 script = ExtResource("1_2wc2x")
+editTile = false
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
@@ -301,9 +302,9 @@ tile_set = SubResource("TileSet_bygyi")
 rendering_quadrant_size = 1
 format = 2
 layer_0/name = "Ground"
-layer_0/tile_data = PackedInt32Array(-65535, 8, 0, 1, 8, 0, 2, 8, 0, -65534, 8, 0)
+layer_0/tile_data = PackedInt32Array(-65535, 8, 0, 1, 8, 0, 2, 8, 0, -65534, 8, 0, 0, 8, 0, -65536, 8, 0, -131072, 8, 0, -131071, 8, 0, -131070, 8, 0, -196606, 8, 0, -196607, 8, 0, -196608, 8, 0, -65537, 8, 0, -1, 8, 0, 65535, 8, 0, -131073, 8, 0)
 layer_1/name = "Road"
-layer_1/tile_data = PackedInt32Array(2, 4, 0, 1, 5, 0, -65535, 6, 0, -65534, 7, 0)
+layer_1/tile_data = PackedInt32Array(2, 4, 0, 1, 5, 0, -65535, 6, 0, -65534, 7, 0, 0, 10, 0, -65536, 11, 0, -131072, 12, 0, -131071, 13, 0, -131070, 14, 0, 65535, 15, 0, -1, 16, 0, -65537, 17, 0, -131073, 18, 0, -196608, 19, 0, -196607, 20, 0, -196606, 21, 0)
 layer_2/name = "Building"
 layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array()
