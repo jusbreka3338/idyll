@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcr5xd3ua6loy"
-path="res://.godot/imported/Untitled_Artwork-2.png-c198d28f46539240357961a99cb05937.ctex"
+uid="uid://df0gt0oj2cbgh"
+path="res://.godot/imported/HoverCursor.png-2aea637d7f7ce1ba1e2c7bd1bd0658ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mouse Cursor/Untitled_Artwork-2.png"
-dest_files=["res://.godot/imported/Untitled_Artwork-2.png-c198d28f46539240357961a99cb05937.ctex"]
+source_file="res://Assets/Mouse Cursor/HoverCursor.png"
+dest_files=["res://.godot/imported/HoverCursor.png-2aea637d7f7ce1ba1e2c7bd1bd0658ae.ctex"]
 
 [params]
 
