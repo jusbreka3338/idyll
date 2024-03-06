@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://b66ao5ik06xe5"]
+[gd_scene load_steps=58 format=3 uid="uid://b66ao5ik06xe5"]
 
 [ext_resource type="Script" path="res://Scripts/master.gd" id="1_2wc2x"]
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="3_ymk5m"]
@@ -27,8 +27,7 @@
 [ext_resource type="Script" path="res://Scripts/TileMap.gd" id="25_iy3r2"]
 [ext_resource type="PackedScene" uid="uid://jhq551w5f08n" path="res://Score.tscn" id="26_u2ho6"]
 [ext_resource type="Texture2D" uid="uid://c1qlh7ymjgtjy" path="res://Assets/Coin_Eye.png" id="27_3yaj4"]
-[ext_resource type="Texture2D" uid="uid://bkm3ish3o5gi1" path="res://Assets/Buildings/frame_apngframe09.png" id="28_sftg6"]
-[ext_resource type="Texture2D" uid="uid://bmnifjb5pc60u" path="res://Assets/Buildings/frame_apngframe07.png" id="29_fbpgy"]
+[ext_resource type="PackedScene" uid="uid://btorh4phgs1n3" path="res://Scenes/building.tscn" id="28_hy7y0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxd0g"]
 texture = ExtResource("3_ymk5m")
@@ -334,26 +333,17 @@ z_index = -100
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -170.0
-offset_top = -194.0
-offset_right = 5877.0
-offset_bottom = 3314.0
+offset_left = -5935.0
+offset_top = -3750.0
+offset_right = 112.0
+offset_bottom = -242.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(3.21361, 3.11254)
 color = Color(1, 1, 0.972549, 1)
 
-[node name="FrameApngframe07" type="Sprite2D" parent="."]
-y_sort_enabled = true
-position = Vector2(3385, 1731)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("29_fbpgy")
-
-[node name="FrameApngframe09" type="Sprite2D" parent="."]
-position = Vector2(2933, 1851)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("28_sftg6")
-
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
 top_level = true
 offset_left = -283.0
 offset_top = -257.0
@@ -365,3 +355,7 @@ root_node = NodePath("../ColorRect2")
 libraries = {
 "": SubResource("AnimationLibrary_vd817")
 }
+
+[node name="Building" parent="." instance=ExtResource("28_hy7y0")]
+position = Vector2(3363, 1729)
+scale = Vector2(0.5, 0.5)
