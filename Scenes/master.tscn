@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://b66ao5ik06xe5"]
+[gd_scene load_steps=59 format=3 uid="uid://b66ao5ik06xe5"]
 
 [ext_resource type="Script" path="res://Scripts/master.gd" id="1_2wc2x"]
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="3_ymk5m"]
@@ -239,6 +239,43 @@ scale_max = 1.5
 color = Color(0.0862745, 0.219608, 0.278431, 1)
 alpha_curve = SubResource("CurveTexture_njknh")
 
+[sub_resource type="Animation" id="Animation_70fjs"]
+resource_name = "Faderingout"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ktpeh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vd817"]
+_data = {
+"Faderingout": SubResource("Animation_70fjs"),
+"RESET": SubResource("Animation_ktpeh")
+}
+
 [node name="Master" type="Node2D"]
 script = ExtResource("1_2wc2x")
 
@@ -306,6 +343,7 @@ grow_vertical = 2
 color = Color(1, 1, 0.972549, 1)
 
 [node name="FrameApngframe07" type="Sprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(3385, 1731)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("29_fbpgy")
@@ -314,3 +352,16 @@ texture = ExtResource("29_fbpgy")
 position = Vector2(2933, 1851)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("28_sftg6")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+top_level = true
+offset_left = -283.0
+offset_top = -257.0
+offset_right = 6905.0
+offset_bottom = 3506.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ColorRect2")
+libraries = {
+"": SubResource("AnimationLibrary_vd817")
+}

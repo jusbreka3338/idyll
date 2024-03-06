@@ -24,7 +24,8 @@ global="*res://Scripts/GlobalScript.gd"
 window/size/viewport_width=5760
 window/size/viewport_height=3240
 window/stretch/mode="viewport"
-mouse_cursor/custom_image="res://Assets/Cursor_-_game_jamidk.png"
+mouse_cursor/custom_image="res://Assets/Mouse Cursor/Untitled_Artwork-1.png"
+mouse_cursor/custom_image_hotspot=Vector2(60, 50)
 
 [input]
 
