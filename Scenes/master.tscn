@@ -223,7 +223,7 @@ blend_mode = 2
 _data = [Vector2(0, 0), 0.0, 1.04521, 0, 0, Vector2(0.493377, 0.492934), 0.0, 0.0, 0, 0, Vector2(0.986755, 0.0483323), -0.927754, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_njknh"]
+[sub_resource type="CurveTexture" id="CurveTexture_e16j3"]
 curve = SubResource("Curve_fwb3p")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8d3yr"]
@@ -238,7 +238,7 @@ gravity = Vector3(2.08165e-12, 1, 2.08165e-12)
 scale_min = 0.5
 scale_max = 1.5
 color = Color(0.411765, 0.411765, 0.411765, 1)
-alpha_curve = SubResource("CurveTexture_njknh")
+alpha_curve = SubResource("CurveTexture_e16j3")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yxppc"]
 blend_mode = 1
@@ -333,7 +333,7 @@ grow_vertical = 1
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = -10
 material = SubResource("CanvasItemMaterial_2vlb2")
-position = Vector2(5697, 2209)
+position = Vector2(2797, 89.9998)
 rotation = 3.14159
 scale = Vector2(55.8468, -36.4364)
 amount = 20
@@ -362,8 +362,11 @@ color = Color(1, 1, 0.972549, 1)
 top_level = true
 material = SubResource("CanvasItemMaterial_yxppc")
 layout_mode = 0
-offset_right = 6059.0
-offset_bottom = 3544.0
+offset_left = -6001.0
+offset_top = -3849.0
+offset_right = 58.0
+offset_bottom = -305.0
+scale = Vector2(3.20342, 3.14135)
 texture = SubResource("GradientTexture2D_hgmrl")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
