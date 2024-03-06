@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://sy8hclu60op2"]
+[gd_scene load_steps=8 format=3 uid="uid://sy8hclu60op2"]
 
 [ext_resource type="Script" path="res://Scripts/trash_can.gd" id="1_l23ix"]
 [ext_resource type="Texture2D" uid="uid://b1rdiygh8yefu" path="res://icon.svg" id="1_qv33k"]
 [ext_resource type="Texture2D" uid="uid://b4bm45d4obbn7" path="res://Assets/Trashcan.png" id="2_b3mxh"]
+[ext_resource type="AudioStream" uid="uid://dhnyklofr21eg" path="res://Sounds/trash rustle.wav" id="4_sjueg"]
+[ext_resource type="AudioStream" uid="uid://cu8gj6gqwcumy" path="res://Sounds/picking up trash.wav" id="5_4yaw0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qnwfd"]
 radius = 194.312
@@ -47,8 +49,15 @@ position = Vector2(66, 47.2)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_qv33k")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_sjueg")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_4yaw0")
+volume_db = -10.265
+
 [connection signal="area_entered" from="TrashArea" to="." method="_on_trash_area_area_entered"]
-[connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]
 [connection signal="mouse_entered" from="ClickArea" to="." method="change_cursor_hand"]
-[connection signal="mouse_exited" from="ClickArea" to="." method="_on_click_area_mouse_exited"]
+[connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]
 [connection signal="mouse_exited" from="ClickArea" to="." method="change_cursor_back"]
+[connection signal="mouse_exited" from="ClickArea" to="." method="_on_click_area_mouse_exited"]

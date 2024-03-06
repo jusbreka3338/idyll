@@ -1,10 +1,367 @@
-[gd_scene load_steps=3 format=3 uid="uid://b66ao5ik06xe5"]
+[gd_scene load_steps=59 format=3 uid="uid://b66ao5ik06xe5"]
 
-[ext_resource type="Script" path="res://Scenes/master.gd" id="1_2wc2x"]
-[ext_resource type="PackedScene" uid="uid://dwj4jacfnd3yk" path="res://Scenes/TestMap.tscn" id="2_ypr3j"]
+[ext_resource type="Script" path="res://Scripts/master.gd" id="1_2wc2x"]
+[ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="3_ymk5m"]
+[ext_resource type="Texture2D" uid="uid://dajhjtsjq7lgc" path="res://Assets/Temp1Building.png" id="4_ket3y"]
+[ext_resource type="Texture2D" uid="uid://bolo7q2252fmp" path="res://Assets/FloorTiles/eTile.png" id="5_ngusg"]
+[ext_resource type="Texture2D" uid="uid://boqa41ag0fw2u" path="res://Assets/FloorTiles/fTile.png" id="6_i6ot6"]
+[ext_resource type="Texture2D" uid="uid://b74w46xotf40j" path="res://Assets/FloorTiles/gTile.png" id="7_2smm3"]
+[ext_resource type="Texture2D" uid="uid://dpso8uw3n1jc0" path="res://Assets/FloorTiles/hTile.png" id="8_iw8hb"]
+[ext_resource type="Texture2D" uid="uid://3joidqyr3q2b" path="res://Assets/FloorTiles/iTile.png" id="9_nqlvx"]
+[ext_resource type="Texture2D" uid="uid://cb21dyx31e7u4" path="res://Assets/FloorTiles/jTile.png" id="10_5jqyb"]
+[ext_resource type="Texture2D" uid="uid://b55cnfpo7p0rb" path="res://Assets/FloorTiles/kTile.png" id="11_wfood"]
+[ext_resource type="Texture2D" uid="uid://c1jax8iyeefei" path="res://Assets/FloorTiles/lTile.png" id="12_322ax"]
+[ext_resource type="Texture2D" uid="uid://cew2dm6rfpfrv" path="res://Assets/FloorTiles/mTile.png" id="13_pmhpw"]
+[ext_resource type="Texture2D" uid="uid://dc6wjtwkc6agt" path="res://Assets/FloorTiles/nTile.png" id="14_hf2pn"]
+[ext_resource type="Texture2D" uid="uid://dp210wk8ovjy" path="res://Assets/Temp2Building.png" id="15_nbxf6"]
+[ext_resource type="Texture2D" uid="uid://bo0s4kp8pm1f7" path="res://Assets/FloorTiles/oTile.png" id="16_mg33l"]
+[ext_resource type="Texture2D" uid="uid://b56512vhlxmtx" path="res://Assets/FloorTiles/pTile.png" id="17_twin2"]
+[ext_resource type="Texture2D" uid="uid://cg6xa1ki4ck7p" path="res://Assets/Temp2SpreadBuilding.png" id="18_ogglq"]
+[ext_resource type="Texture2D" uid="uid://bfk6jp0vsvh1l" path="res://Assets/FloorTiles/aTile.png" id="19_sqc3s"]
+[ext_resource type="Texture2D" uid="uid://g1ndambgy0sf" path="res://Assets/FloorTiles/bTile.png" id="20_r3m6y"]
+[ext_resource type="Texture2D" uid="uid://de14sj0hniiae" path="res://Assets/FloorTiles/cTile.png" id="21_gnhqv"]
+[ext_resource type="Texture2D" uid="uid://cyuvspxqm7w7w" path="res://Assets/FloorTiles/dTile.png" id="22_txfxs"]
+[ext_resource type="Texture2D" uid="uid://bh300ac0by7i8" path="res://Assets/FloorTiles/TileBase.png" id="23_gq0tm"]
+[ext_resource type="Texture2D" uid="uid://bfq6at84tiew2" path="res://Assets/FloorTiles/TileOutline.png" id="24_js1i5"]
+[ext_resource type="PackedScene" uid="uid://yg5e47k0w4og" path="res://pause_menu.tscn" id="25_41gqt"]
+[ext_resource type="Script" path="res://Scripts/TileMap.gd" id="25_iy3r2"]
+[ext_resource type="PackedScene" uid="uid://jhq551w5f08n" path="res://Score.tscn" id="26_u2ho6"]
+[ext_resource type="Texture2D" uid="uid://c1qlh7ymjgtjy" path="res://Assets/Coin_Eye.png" id="27_3yaj4"]
+[ext_resource type="Texture2D" uid="uid://bkm3ish3o5gi1" path="res://Assets/Buildings/frame_apngframe09.png" id="28_sftg6"]
+[ext_resource type="Texture2D" uid="uid://bmnifjb5pc60u" path="res://Assets/Buildings/frame_apngframe07.png" id="29_fbpgy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxd0g"]
+texture = ExtResource("3_ymk5m")
+texture_region_size = Vector2i(300, 260)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixivy"]
+texture = ExtResource("4_ket3y")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/y_sort_origin = -150
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.89954, -356.382, -394.566, -147.078, 4.24268, 65.0538, 383.252, -147.078)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f7550"]
+texture = ExtResource("5_ngusg")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kevpc"]
+texture = ExtResource("6_i6ot6")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_adj6q"]
+texture = ExtResource("7_2smm3")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mia0s"]
+texture = ExtResource("8_iw8hb")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8t3nr"]
+texture = ExtResource("9_nqlvx")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4qoy2"]
+texture = ExtResource("10_5jqyb")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pa0ub"]
+texture = ExtResource("11_wfood")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r2nie"]
+texture = ExtResource("12_322ax")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ctmsc"]
+texture = ExtResource("13_pmhpw")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvdry"]
+texture = ExtResource("14_hf2pn")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rp8ga"]
+texture = ExtResource("15_nbxf6")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/y_sort_origin = -150
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-49.4976, -401.637, -926.31, 147.078, -555.786, 367.696, 321.026, -132.936)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w2yg1"]
+texture = ExtResource("16_mg33l")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_36ynv"]
+texture = ExtResource("17_twin2")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ch6db"]
+texture = ExtResource("18_ogglq")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/y_sort_origin = -150
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-43.8407, -415.779, -977.222, 175.362, -584.07, 384.666, 371.938, -149.907)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0n8mv"]
+texture = ExtResource("19_sqc3s")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtnor"]
+texture = ExtResource("20_r3m6y")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ulhw"]
+texture = ExtResource("21_gnhqv")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tffm0"]
+texture = ExtResource("22_txfxs")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iy471"]
+texture = ExtResource("23_gq0tm")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_npmox"]
+texture = ExtResource("24_js1i5")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_bygyi"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(1900, 1100)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_dxd0g")
+sources/1 = SubResource("TileSetAtlasSource_ixivy")
+sources/2 = SubResource("TileSetAtlasSource_rp8ga")
+sources/3 = SubResource("TileSetAtlasSource_ch6db")
+sources/4 = SubResource("TileSetAtlasSource_0n8mv")
+sources/5 = SubResource("TileSetAtlasSource_wtnor")
+sources/6 = SubResource("TileSetAtlasSource_5ulhw")
+sources/7 = SubResource("TileSetAtlasSource_tffm0")
+sources/8 = SubResource("TileSetAtlasSource_iy471")
+sources/9 = SubResource("TileSetAtlasSource_npmox")
+sources/10 = SubResource("TileSetAtlasSource_f7550")
+sources/11 = SubResource("TileSetAtlasSource_kevpc")
+sources/12 = SubResource("TileSetAtlasSource_adj6q")
+sources/13 = SubResource("TileSetAtlasSource_mia0s")
+sources/14 = SubResource("TileSetAtlasSource_8t3nr")
+sources/15 = SubResource("TileSetAtlasSource_4qoy2")
+sources/16 = SubResource("TileSetAtlasSource_pa0ub")
+sources/17 = SubResource("TileSetAtlasSource_r2nie")
+sources/18 = SubResource("TileSetAtlasSource_ctmsc")
+sources/19 = SubResource("TileSetAtlasSource_kvdry")
+sources/20 = SubResource("TileSetAtlasSource_w2yg1")
+sources/21 = SubResource("TileSetAtlasSource_36ynv")
+
+[sub_resource type="Curve" id="Curve_fwb3p"]
+_data = [Vector2(0, 0), 0.0, 1.04521, 0, 0, Vector2(0.493377, 0.492934), 0.0, 0.0, 0, 0, Vector2(0.986755, 0.0483323), -0.927754, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_njknh"]
+curve = SubResource("Curve_fwb3p")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8d3yr"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(100, 100, 1)
+angle_min = -20.0
+angle_max = 20.0
+spread = 180.0
+initial_velocity_max = 5.0
+gravity = Vector3(2.08165e-12, 1, 2.08165e-12)
+scale_min = 0.5
+scale_max = 1.5
+color = Color(0.0862745, 0.219608, 0.278431, 1)
+alpha_curve = SubResource("CurveTexture_njknh")
+
+[sub_resource type="Animation" id="Animation_70fjs"]
+resource_name = "Faderingout"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ktpeh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vd817"]
+_data = {
+"Faderingout": SubResource("Animation_70fjs"),
+"RESET": SubResource("Animation_ktpeh")
+}
 
 [node name="Master" type="Node2D"]
 script = ExtResource("1_2wc2x")
 
-[node name="TestMap" parent="." instance=ExtResource("2_ypr3j")]
-position = Vector2(2.08165e-12, 2.08165e-12)
+[node name="TileMap" type="TileMap" parent="."]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(2.08165e-12, 500)
+tile_set = SubResource("TileSet_bygyi")
+rendering_quadrant_size = 1
+format = 2
+layer_0/name = "Ground"
+layer_0/tile_data = PackedInt32Array(-65535, 8, 0, 1, 8, 0, 2, 8, 0, -65534, 8, 0)
+layer_1/name = "Road"
+layer_1/tile_data = PackedInt32Array(2, 4, 0, 1, 5, 0, -65535, 6, 0, -65534, 7, 0)
+layer_2/name = "Building"
+layer_2/y_sort_enabled = true
+layer_2/tile_data = PackedInt32Array()
+script = ExtResource("25_iy3r2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(2875, 1610)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="PauseMenu" parent="Camera2D/CanvasLayer" instance=ExtResource("25_41gqt")]
+offset_left = 33.0
+offset_top = 19.0
+offset_right = 33.0
+offset_bottom = 19.0
+metadata/_edit_lock_ = true
+
+[node name="Control" parent="Camera2D" instance=ExtResource("26_u2ho6")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 2880.0
+offset_right = 2880.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+z_index = -10
+position = Vector2(5697, 2209)
+rotation = 3.14159
+scale = Vector2(55.8468, -36.4364)
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_8d3yr")
+texture = ExtResource("27_3yaj4")
+lifetime = 5.0
+speed_scale = 1.97
+explosiveness = 0.24
+randomness = 0.2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -194.0
+offset_right = 5877.0
+offset_bottom = 3314.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0.972549, 1)
+
+[node name="FrameApngframe07" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(3385, 1731)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("29_fbpgy")
+
+[node name="FrameApngframe09" type="Sprite2D" parent="."]
+position = Vector2(2933, 1851)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("28_sftg6")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+top_level = true
+offset_left = -283.0
+offset_top = -257.0
+offset_right = 6905.0
+offset_bottom = 3506.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ColorRect2")
+libraries = {
+"": SubResource("AnimationLibrary_vd817")
+}

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://yg5e47k0w4og"]
+[gd_scene load_steps=9 format=3 uid="uid://yg5e47k0w4og"]
 
 [ext_resource type="Script" path="res://pause_menu.gd" id="1_6srhu"]
 [ext_resource type="Shader" path="res://pause_menu.gdshader" id="1_x3fxc"]
 [ext_resource type="Script" path="res://ColorRect.gd" id="3_s58dw"]
+[ext_resource type="FontFile" uid="uid://dxgkn382u36co" path="res://Open your eyes.ttf" id="4_yba0r"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0l3my"]
 shader = ExtResource("1_x3fxc")
@@ -118,6 +119,7 @@ theme_override_constants/separation = 50
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.415686, 0.329412, 1, 1)
+theme_override_fonts/font = ExtResource("4_yba0r")
 theme_override_font_sizes/font_size = 200
 text = "Paused"
 horizontal_alignment = 1
@@ -149,6 +151,7 @@ alignment = 1
 [node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("4_yba0r")
 theme_override_font_sizes/font_size = 100
 text = "Resume
 "
@@ -156,6 +159,7 @@ text = "Resume
 [node name="Button2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("4_yba0r")
 theme_override_font_sizes/font_size = 100
 text = "Restart
 "
@@ -163,6 +167,7 @@ text = "Restart
 [node name="Button3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("4_yba0r")
 theme_override_font_sizes/font_size = 100
 text = "Back To Main Menu
 "
@@ -170,6 +175,7 @@ text = "Back To Main Menu
 [node name="Button4" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("4_yba0r")
 theme_override_font_sizes/font_size = 100
 text = "Quit"
 

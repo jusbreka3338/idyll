@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://da0qxpfj2dunu"]
 
 [ext_resource type="Script" path="res://NPC.gd" id="1_dlff5"]
-[ext_resource type="Texture2D" uid="uid://b1rdiygh8yefu" path="res://icon.svg" id="1_hfelo"]
+[ext_resource type="Texture2D" uid="uid://bjqni6xhkgi0d" path="res://Spites/Sprite_Base1.png" id="2_88nhi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6crv"]
-size = Vector2(120, 122)
+size = Vector2(76, 125)
 
 [node name="NPC" type="Node2D"]
 y_sort_enabled = true
@@ -13,8 +13,10 @@ script = ExtResource("1_dlff5")
 [node name="Area2D" type="Area2D" parent="." groups=["NPC"]]
 position = Vector2(0, -63)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_j6crv")
-
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-texture = ExtResource("1_hfelo")
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_88nhi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_j6crv")
