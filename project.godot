@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="idyll"
-run/main_scene="res://Scenes/master.tscn"
+run/main_scene="res://Start.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+config/main_scene="res://Start.tscn"
 
 [autoload]
 

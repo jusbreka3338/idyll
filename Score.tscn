@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://jhq551w5f08n"]
+[gd_scene load_steps=3 format=3 uid="uid://jhq551w5f08n"]
 
 [ext_resource type="Script" path="res://Score.gd" id="1_bjurd"]
+[ext_resource type="FontFile" uid="uid://dxgkn382u36co" path="res://Open your eyes.ttf" id="2_rl1nr"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,10 +17,11 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
+offset_left = -140.0
+offset_right = 140.0
+offset_bottom = 72.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_rl1nr")
 theme_override_font_sizes/font_size = 50
 text = "Best Score :"
 horizontal_alignment = 1
@@ -45,6 +47,7 @@ offset_top = 75.0
 offset_right = 140.0
 offset_bottom = 147.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_rl1nr")
 theme_override_font_sizes/font_size = 50
 text = "Score :"
 horizontal_alignment = 1
