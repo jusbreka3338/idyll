@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://b66ao5ik06xe5"]
+[gd_scene load_steps=67 format=3 uid="uid://b66ao5ik06xe5"]
 
 [ext_resource type="Script" path="res://Scripts/master.gd" id="1_2wc2x"]
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="3_ymk5m"]
@@ -16,7 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://dp210wk8ovjy" path="res://Assets/Temp2Building.png" id="15_nbxf6"]
 [ext_resource type="Texture2D" uid="uid://bo0s4kp8pm1f7" path="res://Assets/FloorTiles/oTile.png" id="16_mg33l"]
 [ext_resource type="Texture2D" uid="uid://b56512vhlxmtx" path="res://Assets/FloorTiles/pTile.png" id="17_twin2"]
+[ext_resource type="Texture2D" uid="uid://dpaadvvy0sbwm" path="res://Assets/FloorTiles/TileLOutline.png" id="17_xjhob"]
+[ext_resource type="Texture2D" uid="uid://bnqt5lrxq6crh" path="res://Assets/FloorTiles/TitleTOutline.png" id="18_gf2gu"]
 [ext_resource type="Texture2D" uid="uid://cg6xa1ki4ck7p" path="res://Assets/Temp2SpreadBuilding.png" id="18_ogglq"]
+[ext_resource type="Texture2D" uid="uid://dbpqg1mm8djbf" path="res://Assets/FloorTiles/TileROutline.png" id="19_gpls8"]
 [ext_resource type="Texture2D" uid="uid://bfk6jp0vsvh1l" path="res://Assets/FloorTiles/aTile.png" id="19_sqc3s"]
 [ext_resource type="Texture2D" uid="uid://g1ndambgy0sf" path="res://Assets/FloorTiles/bTile.png" id="20_r3m6y"]
 [ext_resource type="Texture2D" uid="uid://de14sj0hniiae" path="res://Assets/FloorTiles/cTile.png" id="21_gnhqv"]
@@ -137,6 +140,27 @@ texture_region_size = Vector2i(1940, 1750)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mav4b"]
+texture = ExtResource("17_xjhob")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_toeer"]
+texture = ExtResource("18_gf2gu")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xjtc"]
+texture = ExtResource("19_gpls8")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ch6db"]
 texture = ExtResource("18_ogglq")
 texture_region_size = Vector2i(1940, 1750)
@@ -215,6 +239,9 @@ sources/18 = SubResource("TileSetAtlasSource_ctmsc")
 sources/19 = SubResource("TileSetAtlasSource_kvdry")
 sources/20 = SubResource("TileSetAtlasSource_w2yg1")
 sources/21 = SubResource("TileSetAtlasSource_36ynv")
+sources/22 = SubResource("TileSetAtlasSource_mav4b")
+sources/23 = SubResource("TileSetAtlasSource_toeer")
+sources/24 = SubResource("TileSetAtlasSource_1xjtc")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2vlb2"]
 blend_mode = 2
@@ -308,6 +335,12 @@ layer_1/tile_data = PackedInt32Array(2, 4, 0, 1, 5, 0, -65535, 6, 0, -65534, 7, 
 layer_2/name = "Building"
 layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array()
+layer_3/name = "Outline"
+layer_3/tile_data = PackedInt32Array(2, 23, 0, 1, 23, 0, 0, 23, 0, 65535, 23, 0, -65535, 23, 0, -65534, 23, 0, -131070, 23, 0, -196606, 23, 0, -196607, 23, 0, -131071, 23, 0, -196608, 23, 0, -131073, 23, 0, -65537, 23, 0, -131072, 23, 0, -1, 23, 0, -65536, 23, 0)
+layer_4/name = "Outline2"
+layer_4/tile_data = PackedInt32Array(0, 22, 0, 1, 22, 0, 2, 24, 0, -65534, 24, 0, -131070, 24, 0, -196606, 24, 0)
+layer_5/name = "Outline1"
+layer_5/tile_data = PackedInt32Array(2, 22, 0)
 script = ExtResource("25_iy3r2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -371,6 +404,7 @@ scale = Vector2(3.20342, 3.14135)
 texture = SubResource("GradientTexture2D_hgmrl")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
 top_level = true
 offset_left = -283.0
 offset_top = -257.0
