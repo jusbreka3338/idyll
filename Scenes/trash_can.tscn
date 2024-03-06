@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://sy8hclu60op2"]
 
 [ext_resource type="Script" path="res://Scripts/trash_can.gd" id="1_l23ix"]
-[ext_resource type="Texture2D" uid="uid://b1rdiygh8yefu" path="res://icon.svg" id="1_qv33k"]
 [ext_resource type="Texture2D" uid="uid://b4bm45d4obbn7" path="res://Assets/Trashcan.png" id="2_b3mxh"]
+[ext_resource type="Texture2D" uid="uid://drkevkv2v031w" path="res://Assets/TrashBall.png" id="3_ucvh7"]
 [ext_resource type="AudioStream" uid="uid://dhnyklofr21eg" path="res://Sounds/trash rustle.wav" id="4_sjueg"]
 [ext_resource type="AudioStream" uid="uid://cu8gj6gqwcumy" path="res://Sounds/picking up trash.wav" id="5_4yaw0"]
 
@@ -37,17 +37,19 @@ shape = SubResource("RectangleShape2D_ltnsn")
 [node name="Trash1" type="Sprite2D" parent="."]
 position = Vector2(-86, 33.2)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_qv33k")
+texture = ExtResource("3_ucvh7")
 
 [node name="Trash2" type="Sprite2D" parent="."]
 position = Vector2(-41, 68.2)
+rotation = -2.21657
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_qv33k")
+texture = ExtResource("3_ucvh7")
 
 [node name="Trash3" type="Sprite2D" parent="."]
 position = Vector2(66, 47.2)
+rotation = 1.79594
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_qv33k")
+texture = ExtResource("3_ucvh7")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_sjueg")
