@@ -7,7 +7,7 @@ func _ready():
 	hide()
 	score.show()
 	$ColorRect2.hide()
-@onready var score = $"../../Control"
+@onready var score = $"../Control"
 
 func resume():
 	get_tree().paused = false
