@@ -19,6 +19,8 @@ config/main_scene="res://Start.tscn"
 [autoload]
 
 global="*res://Scripts/GlobalScript.gd"
+StageManager="*res://StageManager.tscn"
+StartUpManager="*res://StartUpManager.tscn"
 
 [display]
 
