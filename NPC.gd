@@ -9,7 +9,7 @@ func _ready():
 		"none":
 			pass
 		"andrew":
-			position = Vector2(1271,1646)
+			position = Vector2(1271,1646 - 500)
 			$Path2D.curve.add_point(Vector2(0,0))
 			$Path2D.curve.add_point(Vector2(1564,904))
 			$Path2D.curve.add_point(Vector2(3151,-5))
@@ -23,7 +23,7 @@ func _ready():
 			$Path2D.curve.add_point(Vector2(0,0))
 			speed = 60
 		"zane":
-			position = Vector2(-244,612)
+			position = Vector2(-244,612 - 500)
 			$Path2D.curve.add_point(Vector2(0,0))
 			$Path2D.curve.add_point(Vector2(835,468))
 			$Path2D.curve.add_point(Vector2(1861,-134))
@@ -37,7 +37,15 @@ func _ready():
 			$Path2D.curve.add_point(Vector2(0,0))
 			speed = 50
 		"cody":
-			pass
+			position = Vector2(2367,2127 - 500)
+			$Path2D.curve.add_point(Vector2(0,0))
+			$Path2D.curve.add_point(Vector2(469,265))
+			$Path2D.curve.add_point(Vector2(961,-23))
+			$Path2D.curve.add_point(Vector2(1127,63))
+			$Path2D.curve.add_point(Vector2(472,443))
+			$Path2D.curve.add_point(Vector2(-145,88))
+			$Path2D.curve.add_point(Vector2(0,0))
+			speed = 45
 		"peyton":
 			pass
 		"sienna":
