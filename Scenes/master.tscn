@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://b66ao5ik06xe5"]
+[gd_scene load_steps=74 format=3 uid="uid://b66ao5ik06xe5"]
 
 [ext_resource type="Script" path="res://Scripts/master.gd" id="1_2wc2x"]
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="3_ymk5m"]
@@ -30,9 +30,13 @@
 [ext_resource type="Script" path="res://Scripts/TileMap.gd" id="25_iy3r2"]
 [ext_resource type="PackedScene" uid="uid://jhq551w5f08n" path="res://Score.tscn" id="26_u2ho6"]
 [ext_resource type="Texture2D" uid="uid://c1qlh7ymjgtjy" path="res://Assets/Coin_Eye.png" id="27_3yaj4"]
+[ext_resource type="PackedScene" uid="uid://d18nlerqhuxgf" path="res://Building6.tscn" id="28_ehh04"]
 [ext_resource type="PackedScene" uid="uid://dm3n3wdfkf0nn" path="res://Building1.tscn" id="28_ej2ae"]
 [ext_resource type="PackedScene" uid="uid://cvg60o34aq8pu" path="res://Building.tscn" id="28_wdvo0"]
+[ext_resource type="PackedScene" uid="uid://e7hekvis75w2" path="res://Building5.tscn" id="29_fmdni"]
 [ext_resource type="PackedScene" uid="uid://eudj4858fgl3" path="res://Building2.tscn" id="29_ms7jv"]
+[ext_resource type="PackedScene" uid="uid://dqt1dnqsf7n51" path="res://Building4.tscn" id="30_cucba"]
+[ext_resource type="PackedScene" uid="uid://do7thw7k5840l" path="res://Building3.tscn" id="32_4h55d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxd0g"]
 texture = ExtResource("3_ymk5m")
@@ -275,7 +279,7 @@ blend_mode = 1
 
 [sub_resource type="Gradient" id="Gradient_hb5ry"]
 offsets = PackedFloat32Array(0.107143, 1)
-colors = PackedColorArray(1, 0.788235, 0, 0.258824, 0, 1, 1, 0)
+colors = PackedColorArray(1, 0.788235, 0, 0.0980392, 0, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_hgmrl"]
 gradient = SubResource("Gradient_hb5ry")
@@ -354,9 +358,49 @@ layer_5/y_sort_enabled = true
 layer_5/tile_data = PackedInt32Array(2, 22, 0)
 script = ExtResource("25_iy3r2")
 
+[node name="StaticBody2D17" parent="TileMap" instance=ExtResource("28_ehh04")]
+position = Vector2(355, 207)
+scale = Vector2(0.59, 0.59)
+
+[node name="StaticBody2D16" parent="TileMap" instance=ExtResource("29_fmdni")]
+position = Vector2(1485, -438)
+scale = Vector2(0.56, 0.56)
+
+[node name="StaticBody2D18" parent="TileMap" instance=ExtResource("29_fmdni")]
+position = Vector2(4559, -350)
+scale = Vector2(0.56, 0.56)
+
+[node name="StaticBody2D" parent="TileMap" instance=ExtResource("30_cucba")]
+position = Vector2(2837, 1624)
+scale = Vector2(0.7, 0.7)
+
+[node name="StaticBody2D12" parent="TileMap" instance=ExtResource("28_ej2ae")]
+position = Vector2(1313, 707)
+scale = Vector2(0.53, 0.53)
+
+[node name="StaticBody2D11" parent="TileMap" instance=ExtResource("30_cucba")]
+position = Vector2(1726, 1004)
+scale = Vector2(0.62, 0.62)
+
+[node name="StaticBody2D13" parent="TileMap" instance=ExtResource("30_cucba")]
+position = Vector2(2808, 439)
+scale = Vector2(0.51, 0.51)
+
+[node name="StaticBody2D6" parent="TileMap" instance=ExtResource("30_cucba")]
+position = Vector2(4085, 52)
+scale = Vector2(0.58, 0.58)
+
+[node name="StaticBody2D10" parent="TileMap" instance=ExtResource("32_4h55d")]
+position = Vector2(2839, -635)
+scale = Vector2(0.49, 0.49)
+
 [node name="StaticBody2D3" parent="TileMap" instance=ExtResource("28_ej2ae")]
 position = Vector2(2524, 93)
 scale = Vector2(0.8, 0.8)
+
+[node name="StaticBody2D14" parent="TileMap" instance=ExtResource("28_ej2ae")]
+position = Vector2(4324, 771)
+scale = Vector2(0.48, 0.48)
 
 [node name="StaticBody2D7" parent="TileMap" instance=ExtResource("28_ej2ae")]
 position = Vector2(3824, -763)
@@ -366,33 +410,24 @@ scale = Vector2(0.54, 0.54)
 position = Vector2(5356, 195)
 scale = Vector2(0.42, 0.42)
 
+[node name="StaticBody2D15" parent="TileMap" instance=ExtResource("29_ms7jv")]
+position = Vector2(3385, 1305)
+scale = Vector2(0.47, 0.47)
+
 [node name="StaticBody2D9" parent="TileMap" instance=ExtResource("29_ms7jv")]
 position = Vector2(1736, -1309)
 scale = Vector2(0.5, 0.5)
 
-[node name="StaticBody2D" parent="TileMap" instance=ExtResource("28_wdvo0")]
-y_sort_enabled = true
-position = Vector2(2839, 1682)
-scale = Vector2(0.54, 0.54)
-
 [node name="StaticBody2D8" parent="TileMap" instance=ExtResource("28_wdvo0")]
-y_sort_enabled = true
 position = Vector2(35, 38.0001)
 scale = Vector2(0.54, 0.54)
 
 [node name="StaticBody2D5" parent="TileMap" instance=ExtResource("28_wdvo0")]
-y_sort_enabled = true
 position = Vector2(4865, 512)
 scale = Vector2(0.54, 0.54)
 
-[node name="StaticBody2D6" parent="TileMap" instance=ExtResource("28_wdvo0")]
-y_sort_enabled = true
-position = Vector2(2825, -635)
-scale = Vector2(0.54, 0.54)
-
 [node name="StaticBody2D2" parent="TileMap" instance=ExtResource("28_wdvo0")]
-y_sort_enabled = true
-position = Vector2(3412, 706)
+position = Vector2(3425, 698)
 scale = Vector2(0.8, 0.8)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -448,10 +483,10 @@ color = Color(1, 1, 0.972549, 1)
 top_level = true
 material = SubResource("CanvasItemMaterial_yxppc")
 layout_mode = 0
-offset_left = -6001.0
-offset_top = -3849.0
-offset_right = 58.0
-offset_bottom = -305.0
+offset_left = -7015.0
+offset_top = -3455.0
+offset_right = -956.0
+offset_bottom = 89.0
 scale = Vector2(3.20342, 3.14135)
 texture = SubResource("GradientTexture2D_hgmrl")
 

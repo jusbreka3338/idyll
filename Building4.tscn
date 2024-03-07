@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqt1dnqsf7n51"]
+
+[ext_resource type="Texture2D" uid="uid://dl756e7tskf4u" path="res://Assets/Buildings/frame_apngframe10.png" id="1_8pp3c"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="FrameApngframe09" type="Sprite2D" parent="."]
+modulate = Color(0.964706, 0.964706, 0.964706, 1)
+position = Vector2(4, -424)
+texture = ExtResource("1_8pp3c")

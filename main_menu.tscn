@@ -255,6 +255,7 @@ text = "quit
 "
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
 modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
