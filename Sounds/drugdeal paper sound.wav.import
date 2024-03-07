@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dbkhdnav3q8yx"
+path="res://.godot/imported/drugdeal paper sound.wav-0d06266a23c7b79004f2955f0a0e962d.sample"
+
+[deps]
+
+source_file="res://Sounds/drugdeal paper sound.wav"
+dest_files=["res://.godot/imported/drugdeal paper sound.wav-0d06266a23c7b79004f2955f0a0e962d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
