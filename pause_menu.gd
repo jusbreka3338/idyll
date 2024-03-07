@@ -1,6 +1,7 @@
 extends Control
 
 var canpause : bool = true
+var mainhit : bool = false
 
 func _ready():
 	$AnimationPlayer.play("RESET")
@@ -49,16 +50,22 @@ func _on_button_2_pressed():
 
 
 func _on_button_3_pressed():
-	get_tree().paused = false
-	canpause = false
-	#resume()
-	$ColorRect2.show()
-	$AnimationPlayer.play("ToMain")
-	await get_tree().create_timer(1.5).timeout
-	get_tree().change_scene_to_file("res://main_menu.tscn")
-	global.Crowns = 0
-	#hide()
-	score.show()
+	if mainhit == false:
+		mainhit = true
+		get_tree().paused = false
+		canpause = false
+		#resume()
+		
+		#$ColorRect2.show()
+		
+		#$AnimationPlayer.play("ToMain")
+		
+		#await get_tree().create_timer(1.5).timeout
+		StageManager.changeStage(StageManager.MM)
+		#get_tree().change_scene_to_file("res://main_menu.tscn")
+		global.Crowns = 0
+		#hide()
+		score.show()
 
 
 func _on_button_4_pressed():

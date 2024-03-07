@@ -88,7 +88,7 @@ volume_db = -10.265
 stream = ExtResource("6_vtfae")
 
 [connection signal="area_entered" from="TrashArea" to="." method="_on_trash_area_area_entered"]
-[connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]
 [connection signal="mouse_entered" from="ClickArea" to="." method="change_cursor_hand"]
+[connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]
 [connection signal="mouse_exited" from="ClickArea" to="." method="change_cursor_back"]
 [connection signal="mouse_exited" from="ClickArea" to="." method="_on_click_area_mouse_exited"]
