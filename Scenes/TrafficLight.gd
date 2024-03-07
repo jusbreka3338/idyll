@@ -41,8 +41,9 @@ func change_cursor_click():
 
 func _on_car_crossing_area_entered(area):
 	if area.is_in_group("NPC"):
+		print("yellow")
 		if CarGo == true:
-			area.get_parent().speed = 0
+			area.get_parent().get_parent().get_parent().speed = 0
 
 
 func _on_people_crossing_area_entered(area):
