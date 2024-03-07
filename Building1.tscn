@@ -8,3 +8,5 @@
 modulate = Color(0.964706, 0.964706, 0.964706, 1)
 position = Vector2(-135, -245)
 texture = ExtResource("1_arnxn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
