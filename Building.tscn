@@ -5,5 +5,5 @@
 [node name="StaticBody2D" type="StaticBody2D"]
 
 [node name="FrameApngframe09" type="Sprite2D" parent="."]
-position = Vector2(123, -359)
+position = Vector2(123, -351)
 texture = ExtResource("1_rb1hs")
