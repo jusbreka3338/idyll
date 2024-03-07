@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://clllr28r5nxlc"]
+[gd_scene load_steps=22 format=3 uid="uid://clllr28r5nxlc"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_yplfd"]
 [ext_resource type="PackedScene" uid="uid://c77tib0j3eumc" path="res://node_2d.tscn" id="2_4rtes"]
 [ext_resource type="FontFile" uid="uid://dxgkn382u36co" path="res://Open your eyes.ttf" id="3_qgbyc"]
 [ext_resource type="Texture2D" uid="uid://c1qlh7ymjgtjy" path="res://Assets/Coin_Eye.png" id="4_dk2qu"]
+[ext_resource type="Texture2D" uid="uid://c4ip4in8onyd6" path="res://Assets/Coin_Crown.png" id="5_g4xw7"]
 
 [sub_resource type="Theme" id="Theme_iu373"]
 
@@ -216,7 +217,6 @@ theme_override_constants/margin_right = 50
 [node name="Play Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 focus_mode = 0
-mouse_default_cursor_shape = 2
 theme = SubResource("Theme_iu373")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -239,7 +239,6 @@ theme_override_constants/margin_right = 50
 [node name="Quit Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3"]
 layout_mode = 2
 focus_mode = 0
-mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.862745, 0.827451, 0.992157, 1)
@@ -297,8 +296,22 @@ z_index = -1
 material = SubResource("CanvasItemMaterial_gpi8g")
 position = Vector2(2874, 1539)
 scale = Vector2(44.4412, 23.5442)
+amount = 1
 process_material = SubResource("ParticleProcessMaterial_o3o47")
 texture = ExtResource("4_dk2qu")
+lifetime = 5.0
+speed_scale = 1.97
+explosiveness = 0.24
+randomness = 0.2
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="."]
+z_index = -1
+material = SubResource("CanvasItemMaterial_gpi8g")
+position = Vector2(2874, 1539)
+scale = Vector2(44.4412, 23.5442)
+amount = 6
+process_material = SubResource("ParticleProcessMaterial_o3o47")
+texture = ExtResource("5_g4xw7")
 lifetime = 5.0
 speed_scale = 1.97
 explosiveness = 0.24
