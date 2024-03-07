@@ -13,13 +13,6 @@ var notOpen : bool = true
 func ready(): 
 	$Timer
 	pass
-
-func _on_click_area_mouse_entered():
-	MouseHover = true
-
-
-func _on_click_area_mouse_exited():
-	MouseHover = false
 	
 
 func _process(delta):
@@ -38,6 +31,7 @@ func _process(delta):
 			isOpen = true
 			shouldOpen = false
 			notOpen = false
+			global.Crowns += 5
 
 
 
@@ -57,3 +51,14 @@ func _on_timer_timeout():
 	if random == 1 && notOpen == true:
 		shouldOpen = true
 	else: shouldOpen = false
+
+
+
+
+
+func _on_click_area_mouse_entered():
+	MouseHover = true
+
+
+func _on_click_area_mouse_exited():
+	MouseHover = false
