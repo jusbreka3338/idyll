@@ -7,9 +7,7 @@ func _ready():
 
 
 func _on_play_button_pressed():
-	$AnimationPlayer.play("fadeingin")
-	await get_tree().create_timer(1.5).timeout
-	get_tree().change_scene_to_file("res://Scenes/master.tscn")
+	LevelManagerFade.changeStage(LevelManagerFade.ML)
 
 
 
