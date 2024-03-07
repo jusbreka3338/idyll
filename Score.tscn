@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://jhq551w5f08n"]
+[gd_scene load_steps=4 format=3 uid="uid://jhq551w5f08n"]
 
 [ext_resource type="Script" path="res://Score.gd" id="1_bjurd"]
 [ext_resource type="FontFile" uid="uid://dxgkn382u36co" path="res://Open your eyes.ttf" id="2_rl1nr"]
+[ext_resource type="Texture2D" uid="uid://c1qlh7ymjgtjy" path="res://Assets/Coin_Eye.png" id="3_xklk0"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,6 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_bjurd")
 
 [node name="Scoring" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -42,18 +44,26 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -140.0
-offset_top = 75.0
-offset_right = 140.0
-offset_bottom = 147.0
+offset_left = -2828.0
+offset_top = 28.0
+offset_right = -2548.0
+offset_bottom = 100.0
 grow_horizontal = 2
+scale = Vector2(3.81, 3.81)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_rl1nr")
 theme_override_font_sizes/font_size = 50
-text = "Score :"
+text = "1000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CoinEye" type="Sprite2D" parent="Scoring_Current"]
+position = Vector2(38.0577, 35.958)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_xklk0")
+
 [node name="ColorRect" type="ColorRect" parent="Scoring_Current"]
+visible = false
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
