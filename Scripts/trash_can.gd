@@ -22,6 +22,7 @@ func _on_click_area_mouse_exited():
 func _process(delta):
 	if checking == true:
 		if MouseHover == true:
+			$AudioStreamPlayer2D4.play()
 			change_cursor_hand()
 		else:
 			change_cursor_back()
@@ -30,7 +31,6 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("Click") and MouseHover == true and TrashNumber <3 :
 		TrashNumber = 3
-		$AudioStreamPlayer2D.play()
 		$Sprite2D/AnimationPlayer.play("TrashShake")
 		checking = false
 		change_cursor_click()
