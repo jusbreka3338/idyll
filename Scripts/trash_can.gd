@@ -13,7 +13,7 @@ func ready():
 
 func _on_click_area_mouse_entered():
 	MouseHover = true
-	$AudioStreamPlayer2D3.play()
+	$AudioStreamPlayer2D4.play()
 
 
 func _on_click_area_mouse_exited():
