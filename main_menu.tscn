@@ -32,7 +32,7 @@ extends Label
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gpi8g"]
 
 [sub_resource type="Curve" id="Curve_sabe3"]
-_data = [Vector2(0, 0), 0.0, 1.04521, 0, 0, Vector2(0.493377, 0.492934), 0.0, 0.0, 0, 0, Vector2(0.986755, 0.0483323), -0.927754, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 1.04521, 0, 0, Vector2(0.493377, 0.492934), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.927754, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_njknh"]
