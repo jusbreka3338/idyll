@@ -492,6 +492,7 @@ scale = Vector2(3.20342, 3.14135)
 texture = SubResource("GradientTexture2D_hgmrl")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
 top_level = true
 offset_left = -283.0
 offset_top = -257.0
@@ -507,4 +508,4 @@ libraries = {
 }
 
 [node name="OpenSign" parent="." instance=ExtResource("38_r3imo")]
-position = Vector2(2562, 1957)
+position = Vector2(3434, 1624)
