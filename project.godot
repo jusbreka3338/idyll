@@ -11,21 +11,24 @@ config_version=5
 [application]
 
 config/name="idyll"
-run/main_scene="res://Scenes/master.tscn"
+run/main_scene="res://Start.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+config/main_scene="res://Start.tscn"
 
 [autoload]
 
 global="*res://Scripts/GlobalScript.gd"
+StageManager="*res://StageManager.tscn"
+StartUpManager="*res://StartUpManager.tscn"
+LevelManagerFade="*res://LevelManagerFade.tscn"
 
 [display]
 
 window/size/viewport_width=5760
 window/size/viewport_height=3240
 window/stretch/mode="viewport"
-mouse_cursor/custom_image="res://Assets/Mouse Cursor/Untitled_Artwork-1.png"
-mouse_cursor/custom_image_hotspot=Vector2(60, 50)
+mouse_cursor/custom_image="res://Assets/Mouse Cursor/DefaultCursor.png"
 
 [input]
 

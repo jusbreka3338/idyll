@@ -7,6 +7,7 @@ var stage = 0
 var ground_layer = 0
 var road_layer = 1
 var building_layer = 2
+@export var editTile = true
 var Stage1path = load("res://Scenes/Stage1.tscn")
 var Stage2path = load("res://Scenes/Stage2.tscn")
 var Stage3path = load("res://Scenes/Stage3.tscn")
@@ -16,9 +17,38 @@ var donce3 = true
 
 
 func _ready():
+	if editTile == false:
+		Tiles.set_cell(ground_layer,Vector2i(0,0) ,-1 , Vector2i(0,0))
+		Tiles.set_cell(ground_layer,Vector2i(0,-1) ,-1 , Vector2i(0,0))
+		Tiles.set_cell(ground_layer,Vector2i(0,-2) ,-1 , Vector2i(0,0))
+		Tiles.set_cell(ground_layer,Vector2i(1,-2) ,-1 , Vector2i(0,0))
+		Tiles.set_cell(ground_layer,Vector2i(2,-2) ,-1 , Vector2i(0,0))
+		
+		Tiles.set_cell(road_layer,Vector2i(0,0) , -1 , Vector2i(0,0))
+		Tiles.set_cell(road_layer,Vector2i(0,-1) , -1 , Vector2i(0,0))
+		Tiles.set_cell(road_layer,Vector2i(0,-2) , -1 , Vector2i(0,0))
+		Tiles.set_cell(road_layer,Vector2i(1,-2) , -1 , Vector2i(0,0))
+		Tiles.set_cell(road_layer,Vector2i(2,-2) , -1 , Vector2i(0,0))
+		
+		Tiles.set_cell(ground_layer,Vector2i(-1,0) ,-1 , Vector2i(0,0))
+		Tiles.set_cell(ground_layer,Vector2i(-1,-1) ,-1 , Vector2i(0,0))
+		Tiles.set_cell(ground_layer,Vector2i(-1,-2) ,-1 , Vector2i(0,0))
+		Tiles.set_cell(ground_layer,Vector2i(-1,-3) ,-1 , Vector2i(0,0))
+		Tiles.set_cell(ground_layer,Vector2i(0,-3) ,-1 , Vector2i(0,0))
+		Tiles.set_cell(ground_layer,Vector2i(1,-3) ,-1 , Vector2i(0,0))
+		Tiles.set_cell(ground_layer,Vector2i(2,-3) ,-1 , Vector2i(0,0))
+		
+		Tiles.set_cell(road_layer,Vector2i(-1,0) , -1 , Vector2i(0,0))
+		Tiles.set_cell(road_layer,Vector2i(-1,-1) , -1 , Vector2i(0,0))
+		Tiles.set_cell(road_layer,Vector2i(-1,-2) , -1 , Vector2i(0,0))
+		Tiles.set_cell(road_layer,Vector2i(-1,-3) , -1 , Vector2i(0,0))
+		Tiles.set_cell(road_layer,Vector2i(0,-3) , -1 , Vector2i(0,0))
+		Tiles.set_cell(road_layer,Vector2i(1,-3) , -1 , Vector2i(0,0))
+		Tiles.set_cell(road_layer,Vector2i(2,-3) , -1 , Vector2i(0,0))
 	$AnimationPlayer.play("Faderingout")
 	await get_tree().create_timer(1.5).timeout
 	queue_free
+	
 	pass
 
 func _process(delta):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://b66ao5ik06xe5"]
+[gd_scene load_steps=74 format=3 uid="uid://b66ao5ik06xe5"]
 
 [ext_resource type="Script" path="res://Scripts/master.gd" id="1_2wc2x"]
 [ext_resource type="Texture2D" uid="uid://im2jnku2yl65" path="res://Assets/TempTile.png" id="3_ymk5m"]
@@ -16,7 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://dp210wk8ovjy" path="res://Assets/Temp2Building.png" id="15_nbxf6"]
 [ext_resource type="Texture2D" uid="uid://bo0s4kp8pm1f7" path="res://Assets/FloorTiles/oTile.png" id="16_mg33l"]
 [ext_resource type="Texture2D" uid="uid://b56512vhlxmtx" path="res://Assets/FloorTiles/pTile.png" id="17_twin2"]
+[ext_resource type="Texture2D" uid="uid://dpaadvvy0sbwm" path="res://Assets/FloorTiles/TileLOutline.png" id="17_xjhob"]
+[ext_resource type="Texture2D" uid="uid://bnqt5lrxq6crh" path="res://Assets/FloorTiles/TitleTOutline.png" id="18_gf2gu"]
 [ext_resource type="Texture2D" uid="uid://cg6xa1ki4ck7p" path="res://Assets/Temp2SpreadBuilding.png" id="18_ogglq"]
+[ext_resource type="Texture2D" uid="uid://dbpqg1mm8djbf" path="res://Assets/FloorTiles/TileROutline.png" id="19_gpls8"]
 [ext_resource type="Texture2D" uid="uid://bfk6jp0vsvh1l" path="res://Assets/FloorTiles/aTile.png" id="19_sqc3s"]
 [ext_resource type="Texture2D" uid="uid://g1ndambgy0sf" path="res://Assets/FloorTiles/bTile.png" id="20_r3m6y"]
 [ext_resource type="Texture2D" uid="uid://de14sj0hniiae" path="res://Assets/FloorTiles/cTile.png" id="21_gnhqv"]
@@ -27,8 +30,13 @@
 [ext_resource type="Script" path="res://Scripts/TileMap.gd" id="25_iy3r2"]
 [ext_resource type="PackedScene" uid="uid://jhq551w5f08n" path="res://Score.tscn" id="26_u2ho6"]
 [ext_resource type="Texture2D" uid="uid://c1qlh7ymjgtjy" path="res://Assets/Coin_Eye.png" id="27_3yaj4"]
-[ext_resource type="Texture2D" uid="uid://bkm3ish3o5gi1" path="res://Assets/Buildings/frame_apngframe09.png" id="28_sftg6"]
-[ext_resource type="Texture2D" uid="uid://bmnifjb5pc60u" path="res://Assets/Buildings/frame_apngframe07.png" id="29_fbpgy"]
+[ext_resource type="PackedScene" uid="uid://d18nlerqhuxgf" path="res://Building6.tscn" id="28_ehh04"]
+[ext_resource type="PackedScene" uid="uid://dm3n3wdfkf0nn" path="res://Building1.tscn" id="28_ej2ae"]
+[ext_resource type="PackedScene" uid="uid://cvg60o34aq8pu" path="res://Building.tscn" id="28_wdvo0"]
+[ext_resource type="PackedScene" uid="uid://e7hekvis75w2" path="res://Building5.tscn" id="29_fmdni"]
+[ext_resource type="PackedScene" uid="uid://eudj4858fgl3" path="res://Building2.tscn" id="29_ms7jv"]
+[ext_resource type="PackedScene" uid="uid://dqt1dnqsf7n51" path="res://Building4.tscn" id="30_cucba"]
+[ext_resource type="PackedScene" uid="uid://do7thw7k5840l" path="res://Building3.tscn" id="32_4h55d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxd0g"]
 texture = ExtResource("3_ymk5m")
@@ -139,6 +147,27 @@ texture_region_size = Vector2i(1940, 1750)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mav4b"]
+texture = ExtResource("17_xjhob")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_toeer"]
+texture = ExtResource("18_gf2gu")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xjtc"]
+texture = ExtResource("19_gpls8")
+texture_region_size = Vector2i(1940, 1750)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ch6db"]
 texture = ExtResource("18_ogglq")
 texture_region_size = Vector2i(1940, 1750)
@@ -217,12 +246,18 @@ sources/18 = SubResource("TileSetAtlasSource_ctmsc")
 sources/19 = SubResource("TileSetAtlasSource_kvdry")
 sources/20 = SubResource("TileSetAtlasSource_w2yg1")
 sources/21 = SubResource("TileSetAtlasSource_36ynv")
+sources/22 = SubResource("TileSetAtlasSource_mav4b")
+sources/23 = SubResource("TileSetAtlasSource_toeer")
+sources/24 = SubResource("TileSetAtlasSource_1xjtc")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2vlb2"]
+blend_mode = 2
 
 [sub_resource type="Curve" id="Curve_fwb3p"]
 _data = [Vector2(0, 0), 0.0, 1.04521, 0, 0, Vector2(0.493377, 0.492934), 0.0, 0.0, 0, 0, Vector2(0.986755, 0.0483323), -0.927754, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_njknh"]
+[sub_resource type="CurveTexture" id="CurveTexture_e16j3"]
 curve = SubResource("Curve_fwb3p")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8d3yr"]
@@ -236,8 +271,21 @@ initial_velocity_max = 5.0
 gravity = Vector3(2.08165e-12, 1, 2.08165e-12)
 scale_min = 0.5
 scale_max = 1.5
-color = Color(0.0862745, 0.219608, 0.278431, 1)
-alpha_curve = SubResource("CurveTexture_njknh")
+color = Color(0.411765, 0.411765, 0.411765, 1)
+alpha_curve = SubResource("CurveTexture_e16j3")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yxppc"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_hb5ry"]
+offsets = PackedFloat32Array(0.107143, 1)
+colors = PackedColorArray(1, 0.788235, 0, 0.0980392, 0, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hgmrl"]
+gradient = SubResource("Gradient_hb5ry")
+fill = 1
+fill_from = Vector2(0.706422, 0.252294)
+fill_to = Vector2(0, 1)
 
 [sub_resource type="Animation" id="Animation_70fjs"]
 resource_name = "Faderingout"
@@ -278,22 +326,109 @@ _data = {
 
 [node name="Master" type="Node2D"]
 script = ExtResource("1_2wc2x")
+editTile = false
 
 [node name="TileMap" type="TileMap" parent="."]
-z_index = -1
 y_sort_enabled = true
-position = Vector2(2.08165e-12, 500)
+position = Vector2(0, 500)
 tile_set = SubResource("TileSet_bygyi")
 rendering_quadrant_size = 1
 format = 2
 layer_0/name = "Ground"
-layer_0/tile_data = PackedInt32Array(-65535, 8, 0, 1, 8, 0, 2, 8, 0, -65534, 8, 0)
+layer_0/y_sort_enabled = true
+layer_0/z_index = -2
+layer_0/tile_data = PackedInt32Array(-65535, 8, 0, 1, 8, 0, 2, 8, 0, -65534, 8, 0, 0, 8, 0, -65536, 8, 0, -131072, 8, 0, -131071, 8, 0, -131070, 8, 0, -196606, 8, 0, -196607, 8, 0, -196608, 8, 0, -65537, 8, 0, -1, 8, 0, 65535, 8, 0, -131073, 8, 0)
 layer_1/name = "Road"
-layer_1/tile_data = PackedInt32Array(2, 4, 0, 1, 5, 0, -65535, 6, 0, -65534, 7, 0)
+layer_1/y_sort_enabled = true
+layer_1/z_index = -1
+layer_1/tile_data = PackedInt32Array(2, 4, 0, 1, 5, 0, -65535, 6, 0, -65534, 7, 0, 0, 10, 0, -65536, 11, 0, -131072, 12, 0, -131071, 13, 0, -131070, 14, 0, 65535, 15, 0, -1, 16, 0, -65537, 17, 0, -131073, 18, 0, -196608, 19, 0, -196607, 20, 0, -196606, 21, 0)
 layer_2/name = "Building"
 layer_2/y_sort_enabled = true
+layer_2/z_index = -1
 layer_2/tile_data = PackedInt32Array()
+layer_3/name = "Outline"
+layer_3/z_index = -1
+layer_3/tile_data = PackedInt32Array(2, 23, 0, 1, 23, 0, 0, 23, 0, 65535, 23, 0, -65535, 23, 0, -65534, 23, 0, -131070, 23, 0, -196606, 23, 0, -196607, 23, 0, -131071, 23, 0, -196608, 23, 0, -131073, 23, 0, -65537, 23, 0, -131072, 23, 0, -1, 23, 0, -65536, 23, 0)
+layer_4/name = "Outline2"
+layer_4/y_sort_enabled = true
+layer_4/z_index = -1
+layer_4/tile_data = PackedInt32Array(0, 22, 0, 1, 22, 0, 2, 24, 0, -65534, 24, 0, -131070, 24, 0, -196606, 24, 0)
+layer_5/name = "Outline1"
+layer_5/y_sort_enabled = true
+layer_5/tile_data = PackedInt32Array(2, 22, 0)
 script = ExtResource("25_iy3r2")
+
+[node name="StaticBody2D17" parent="TileMap" instance=ExtResource("28_ehh04")]
+position = Vector2(355, 207)
+scale = Vector2(0.59, 0.59)
+
+[node name="StaticBody2D16" parent="TileMap" instance=ExtResource("29_fmdni")]
+position = Vector2(1485, -438)
+scale = Vector2(0.56, 0.56)
+
+[node name="StaticBody2D18" parent="TileMap" instance=ExtResource("29_fmdni")]
+position = Vector2(4559, -350)
+scale = Vector2(0.56, 0.56)
+
+[node name="StaticBody2D" parent="TileMap" instance=ExtResource("30_cucba")]
+position = Vector2(2837, 1624)
+scale = Vector2(0.7, 0.7)
+
+[node name="StaticBody2D12" parent="TileMap" instance=ExtResource("28_ej2ae")]
+position = Vector2(1313, 707)
+scale = Vector2(0.53, 0.53)
+
+[node name="StaticBody2D11" parent="TileMap" instance=ExtResource("30_cucba")]
+position = Vector2(1726, 1004)
+scale = Vector2(0.62, 0.62)
+
+[node name="StaticBody2D13" parent="TileMap" instance=ExtResource("30_cucba")]
+position = Vector2(2808, 439)
+scale = Vector2(0.51, 0.51)
+
+[node name="StaticBody2D6" parent="TileMap" instance=ExtResource("30_cucba")]
+position = Vector2(4085, 52)
+scale = Vector2(0.58, 0.58)
+
+[node name="StaticBody2D10" parent="TileMap" instance=ExtResource("32_4h55d")]
+position = Vector2(2839, -635)
+scale = Vector2(0.49, 0.49)
+
+[node name="StaticBody2D3" parent="TileMap" instance=ExtResource("28_ej2ae")]
+position = Vector2(2524, 93)
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticBody2D14" parent="TileMap" instance=ExtResource("28_ej2ae")]
+position = Vector2(4324, 771)
+scale = Vector2(0.48, 0.48)
+
+[node name="StaticBody2D7" parent="TileMap" instance=ExtResource("28_ej2ae")]
+position = Vector2(3824, -763)
+scale = Vector2(0.54, 0.54)
+
+[node name="StaticBody2D4" parent="TileMap" instance=ExtResource("29_ms7jv")]
+position = Vector2(5356, 195)
+scale = Vector2(0.42, 0.42)
+
+[node name="StaticBody2D15" parent="TileMap" instance=ExtResource("29_ms7jv")]
+position = Vector2(3385, 1305)
+scale = Vector2(0.47, 0.47)
+
+[node name="StaticBody2D9" parent="TileMap" instance=ExtResource("29_ms7jv")]
+position = Vector2(1736, -1309)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D8" parent="TileMap" instance=ExtResource("28_wdvo0")]
+position = Vector2(35, 38.0001)
+scale = Vector2(0.54, 0.54)
+
+[node name="StaticBody2D5" parent="TileMap" instance=ExtResource("28_wdvo0")]
+position = Vector2(4865, 512)
+scale = Vector2(0.54, 0.54)
+
+[node name="StaticBody2D2" parent="TileMap" instance=ExtResource("28_wdvo0")]
+position = Vector2(3425, 698)
+scale = Vector2(0.8, 0.8)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(2875, 1610)
@@ -307,7 +442,7 @@ offset_right = 33.0
 offset_bottom = 19.0
 metadata/_edit_lock_ = true
 
-[node name="Control" parent="Camera2D" instance=ExtResource("26_u2ho6")]
+[node name="Control" parent="Camera2D/CanvasLayer" instance=ExtResource("26_u2ho6")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -318,7 +453,8 @@ grow_vertical = 1
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 z_index = -10
-position = Vector2(5697, 2209)
+material = SubResource("CanvasItemMaterial_2vlb2")
+position = Vector2(2797, 89.9998)
 rotation = 3.14159
 scale = Vector2(55.8468, -36.4364)
 amount = 20
@@ -334,31 +470,35 @@ z_index = -100
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -170.0
-offset_top = -194.0
-offset_right = 5877.0
-offset_bottom = 3314.0
+offset_left = -5935.0
+offset_top = -3750.0
+offset_right = 112.0
+offset_bottom = -242.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(3.21361, 3.11254)
 color = Color(1, 1, 0.972549, 1)
 
-[node name="FrameApngframe07" type="Sprite2D" parent="."]
-y_sort_enabled = true
-position = Vector2(3385, 1731)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("29_fbpgy")
-
-[node name="FrameApngframe09" type="Sprite2D" parent="."]
-position = Vector2(2933, 1851)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("28_sftg6")
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+top_level = true
+material = SubResource("CanvasItemMaterial_yxppc")
+layout_mode = 0
+offset_left = -7037.0
+offset_top = -3217.0
+offset_right = -978.0
+offset_bottom = 327.0
+scale = Vector2(3.20342, 3.14135)
+texture = SubResource("GradientTexture2D_hgmrl")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
 top_level = true
 offset_left = -283.0
 offset_top = -257.0
 offset_right = 6905.0
 offset_bottom = 3506.0
+
+[node name="Node" type="Node" parent="ColorRect2"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../ColorRect2")

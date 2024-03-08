@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://didvo6vk7fem4"]
+
+[ext_resource type="Script" path="res://Scenes/TrafficLight.gd" id="1_i5mad"]
+[ext_resource type="Texture2D" uid="uid://cvid64lv00n0i" path="res://Assets/Stoplight.png" id="1_m6gwt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwgiy"]
+size = Vector2(239.106, 59.8812)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bkyan"]
+size = Vector2(50.3542, 254.217)
+
+[node name="TrafficLight" type="Node2D"]
+script = ExtResource("1_i5mad")
+
+[node name="TrafficLightSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_m6gwt")
+
+[node name="CarCrossing" type="Area2D" parent="."]
+
+[node name="CarCollision" type="CollisionShape2D" parent="CarCrossing"]
+position = Vector2(378.481, 282.089)
+rotation = -0.656244
+skew = -0.39619
+shape = SubResource("RectangleShape2D_jwgiy")
+
+[node name="PeopleCrossing" type="Area2D" parent="."]
+
+[node name="PeopleCollision" type="CollisionShape2D" parent="PeopleCrossing"]
+position = Vector2(53.5997, 285.623)
+rotation = -0.657989
+skew = -0.404917
+shape = SubResource("RectangleShape2D_bkyan")
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ClickArea"]
+polygon = PackedVector2Array(-42, -172, -43, -22, 0, 0, 41, -26, 44, -172, 1, -197)
+
+[connection signal="area_entered" from="CarCrossing" to="." method="_on_car_crossing_area_entered"]
+[connection signal="area_entered" from="PeopleCrossing" to="." method="_on_people_crossing_area_entered"]
+[connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]
+[connection signal="mouse_exited" from="ClickArea" to="." method="_on_click_area_mouse_exited"]

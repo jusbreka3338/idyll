@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Scoring_Current.text = "Score : " + str(global.Crowns)
+	$Scoring_Current.text = str(global.Crowns)
 	$Scoring.text = "Best Score : " + str(global.BestCrowns)
 	if global.Crowns > global.BestCrowns:
 		global.BestCrowns = global.Crowns

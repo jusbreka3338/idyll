@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c85pjhsrg5ek1"
-path="res://.godot/imported/Untitled_Artwork-3.png-e472cbfbdc1d21ce43806ae86428cd52.ctex"
+uid="uid://cop1je8uv4mfe"
+path="res://.godot/imported/OpenSign.png-83fcae90291c93bc57a031c80fb7045d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mouse Cursor/Untitled_Artwork-3.png"
-dest_files=["res://.godot/imported/Untitled_Artwork-3.png-e472cbfbdc1d21ce43806ae86428cd52.ctex"]
+source_file="res://Assets/OpenSign.png"
+dest_files=["res://.godot/imported/OpenSign.png-83fcae90291c93bc57a031c80fb7045d.ctex"]
 
 [params]
 

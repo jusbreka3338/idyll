@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://blmcm4phve1kt"]
+[gd_scene load_steps=8 format=3 uid="uid://blmcm4phve1kt"]
 
 [ext_resource type="Script" path="res://Start.gd" id="1_hqpoy"]
+[ext_resource type="FontFile" uid="uid://dxgkn382u36co" path="res://Open your eyes.ttf" id="2_d5n1r"]
 
 [sub_resource type="Animation" id="Animation_bqupe"]
 resource_name = "Fade In"
@@ -33,6 +34,34 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qqv4p"]
+resource_name = "Fading"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_kksg5"]
 length = 0.001
@@ -48,11 +77,24 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v3erg"]
 _data = {
 "Fade In": SubResource("Animation_bqupe"),
 "Fade Out": SubResource("Animation_cq1v6"),
+"Fading": SubResource("Animation_qqv4p"),
 "RESET": SubResource("Animation_kksg5")
 }
 
@@ -81,13 +123,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_d5n1r")
 theme_override_font_sizes/font_size = 150
-text = "Made By : The Decker Crew
+text = "3 to 1 Presents!
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
